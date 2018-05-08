@@ -1,0 +1,11 @@
+{"compile":[
+["C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\captain.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\captain.o C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\captain.c"],
+["C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\crew.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\crew.o C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\crew.c"]
+],
+"link":[
+"C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\captain.o",
+"C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\stdlib_system.o",
+"C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\crew.o"
+],
+"linkcmd": "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\"   -o C:\\SpaceRLTextEngine\\src\\crew\\captain.exe  C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\captain.o C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\stdlib_system.o C:\\SpaceRLTextEngine\\src\\crew\\nimcache\\crew.o    "
+}
