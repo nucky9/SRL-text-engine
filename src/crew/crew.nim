@@ -1,4 +1,7 @@
 import
+  os,
+  parsecsv,
+  streams,
   random,
   ../types/crewtypes,
   captain,
@@ -9,14 +12,66 @@ import
   science,
   tactical
 
+const
+  maleNamesFile = "../assets/names/maleNames.csv"
+  femaleNamesFile = "../assets/names/femaleNames.csv"
 
 
-proc generateFirstName(): string =
-  result = "James"
+proc generateGender(): Gender =
+  let randomRoll = rand(0..1)
+  if randomRoll == 0:
+    return female
+  else:
+    return male
+
+
+proc generateFirstName(gender: Gender): string =
+  var
+    p: CsvParser
+    nameFile: string
+  if gender == male:
+    nameFile = maleNamesFile
+  else:
+    nameFile = femaleNamesFile
+
+  p.open(nameFile)
+  var numRows = 0
+  while p.readRow():
+    inc numRows
+  p.close()
+  p.open(nameFile)
+  let randomRow = rand(0..<numRows)
+  var i = 0
+  while p.readRow():
+    if i == (randomRow):
+      return p.row[0]
+    else:
+      inc i
+
+  p.close()
 
 
 proc generateLastName(): string =
   result = "Kirk"
+
+
+proc generatePersonalityModifiers(): seq[PersonalityModifier] =
+  result = @[]
+  for personality in PersonalityType:
+    var
+      modifier: int
+      newPersonalityModifier: PersonalityModifier
+    
+    for entry in personalityModifiers:
+      let randomRoll = rand(0..100)
+      if randomRoll <= entry[0]:
+        modifier = entry[1]
+        break
+    newPersonalityModifier.personality = personality
+    newPersonalityModifier.modifier = modifier
+
+    result.add(newPersonalityModifier)
+         
 
 proc generatePersonalityType(): PersonalityType =
   let personalities = @[ptA, ptB, ptC, ptD, ptE]
@@ -24,12 +79,15 @@ proc generatePersonalityType(): PersonalityType =
 
 
 proc generateBaseCrewInfo*(): BaseCrewInfo =
+  let gender = generateGender()
   result = BaseCrewInfo(
-    firstName: generateFirstName(),
+    gender: gender,
+    firstName: generateFirstName(gender),
     lastName: generateLastName(),
     experience: 0,
     level: 1,
-    personalityType: generatePersonalityType()
+    personalityType: generatePersonalityType(),
+    personalityModifiers: generatePersonalityModifiers()
   )
 
 

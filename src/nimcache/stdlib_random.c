@@ -44,11 +44,11 @@ tyProc_ojoeKfW4VYIm36I9cpDTQIg marker;
 tyProc_WSm2xU5ARYv9aAR4l0z9c9auQ deepcopy;
 };
 typedef NU64 tyArray_NzKR9bw29cLPrd712Xt6Liiw[2];
-typedef NU8 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ;
 struct tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA {
 NI a;
 NI b;
 };
+typedef NU8 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ;
 typedef NU8 tyEnum_TNimNodeKind_unfNsxrcATrufDZmpBq4HQ;
 struct TNimNode {
 tyEnum_TNimNodeKind_unfNsxrcATrufDZmpBq4HQ kind;
@@ -79,9 +79,9 @@ N_LIB_PRIVATE N_NIMCALL(tyObject_Rand_liBKmwv1H6v7oYBhDFHa6A, initRand_NhNuJ1iY3
 N_LIB_PRIVATE N_NIMCALL(void, randomize_9aDxwSmhEywR3kjOrZk8qbA)(NI64 seed);
 N_LIB_PRIVATE N_NIMCALL(void, randomize_RtUZt2O8eA6Y5pFWOsdgjg)(void);
 N_LIB_PRIVATE N_NIMCALL(NF, ntepochTime)(void);
-N_LIB_PRIVATE N_NIMCALL(NI, rand_an9ajRjsC0saLyxF46lqhIw)(tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA x);
 N_LIB_PRIVATE N_NIMCALL(NI, rand_llsvpw3XcUUMY9bBfAwkSMg)(tyObject_Rand_liBKmwv1H6v7oYBhDFHa6A* r, tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA x);
 static N_INLINE(NI, subInt)(NI a, NI b);
+N_LIB_PRIVATE N_NIMCALL(NI, rand_an9ajRjsC0saLyxF46lqhIw)(tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA x);
 static N_INLINE(tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA, dotdot__vDQySKWzgnxQdUarow6k5Qtimes)(NI a, NI b);
 tyObject_Rand_liBKmwv1H6v7oYBhDFHa6A state_4atHrcHUZPts5LqH9bzbl0w;
 TNimType NTI_liBKmwv1H6v7oYBhDFHa6A_;

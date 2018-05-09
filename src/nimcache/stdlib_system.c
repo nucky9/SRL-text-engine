@@ -899,6 +899,7 @@ static N_INLINE(NIM_BOOL, eqeq__9ccNWqrTIE9bcAqE2Q0ro7zgsystem)(NCSTRING x, NCST
 N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, contains_ShDs2EBcKTg10Om1piaG9aw)(tyObject_SmallChunk_tXn60W2f8h3jgAYdEmy5NQ* list, tyObject_SmallChunk_tXn60W2f8h3jgAYdEmy5NQ* x);
 static N_NIMCALL(void, Marker_tyRef_TLVXkEbYONqsuh3EtIf38A)(void* p, NI op);
 static N_NIMCALL(void, Marker_tyRef_yCEN9anxCD6mzBxGjuaRBdg)(void* p, NI op);
+static N_NIMCALL(void, Marker_tyRef_Qx9aKy4vZ9bVz9bnG9brQcRHGA)(void* p, NI op);
 static N_NIMCALL(void, Marker_tySequence_Jtxj8YnZO9cu8mqaUBb1RtA)(void* p, NI op);
 NIM_BOOL nimvm_IAxmsqnME4Jmed24hOgrFQ;
 NI nim_program_result;
@@ -1004,6 +1005,10 @@ TNimType NTI_DcZ5N67dL3rBj9bxGtx09bFg_;
 TNimType NTI_g9buja9c9aeh0rkDpqsXOJF9bA_;
 TNimType NTI_Gi06FkNeykJn7mrqRZYrkA_;
 TNimType NTI_yCEN9anxCD6mzBxGjuaRBdg_;
+TNimType NTI_Qx9aKy4vZ9bVz9bnG9brQcRHGA_;
+TNimType NTI_9bz2muykEFR6eMHxLnfcjxA_;
+TNimType NTI_7BHnQsEj49a9c6QtudqWTo1w_;
+TNimType NTI_nmiMWKVIe46vacnhAFrQvw_;
 extern TNimType NTI_gdWQV5cGkpq7KxGxo9aIyQQ_;
 TNimType NTI_Jtxj8YnZO9cu8mqaUBb1RtA_;
 STRING_LITERAL(TM_Q5wkpxktOdTGvlSRo9bzt9aw_2, "", 0);
@@ -13993,6 +13998,40 @@ static N_NIMCALL(void, Marker_tyRef_yCEN9anxCD6mzBxGjuaRBdg)(void* p, NI op) {
 	nimGCvisit((void*)(*a).Sup.trace, op);
 	nimGCvisit((void*)(*a).Sup.up, op);
 }
+static N_NIMCALL(void, Marker_tyRef_Qx9aKy4vZ9bVz9bnG9brQcRHGA)(void* p, NI op) {
+	tyObject_OSError_3XwRQvmzCEOC4QnT706q1g* a;
+	a = (tyObject_OSError_3XwRQvmzCEOC4QnT706q1g*)p;
+	nimGCvisit((void*)(*a).Sup.Sup.parent, op);
+	nimGCvisit((void*)(*a).Sup.Sup.message, op);
+	nimGCvisit((void*)(*a).Sup.Sup.trace, op);
+	nimGCvisit((void*)(*a).Sup.Sup.up, op);
+}
+
+N_LIB_PRIVATE N_NIMCALL(NI, clamp_RrNgT2340KObgDMnZWSK5A)(NI x, NI a, NI b) {
+	NI result;
+	nimfr_("clamp", "system.nim");
+{	result = (NI)0;
+	nimln_(2171, "system.nim");
+	{
+		if (!(x < a)) goto LA3_;
+		result = a;
+		goto BeforeRet_;
+	}
+	LA3_: ;
+	nimln_(2172, "system.nim");
+	{
+		if (!(b < x)) goto LA7_;
+		result = b;
+		goto BeforeRet_;
+	}
+	LA7_: ;
+	nimln_(2173, "system.nim");
+	result = x;
+	goto BeforeRet_;
+	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
 static N_NIMCALL(void, Marker_tySequence_Jtxj8YnZO9cu8mqaUBb1RtA)(void* p, NI op) {
 	tySequence_Jtxj8YnZO9cu8mqaUBb1RtA* a;
 	NI T1_;
@@ -14114,7 +14153,7 @@ static TNimNode* TM_Q5wkpxktOdTGvlSRo9bzt9aw_60[2];
 static TNimNode* TM_Q5wkpxktOdTGvlSRo9bzt9aw_61[5];
 static TNimNode* TM_Q5wkpxktOdTGvlSRo9bzt9aw_62[2];
 static TNimNode* TM_Q5wkpxktOdTGvlSRo9bzt9aw_116[2];
-static TNimNode TM_Q5wkpxktOdTGvlSRo9bzt9aw_0[147];
+static TNimNode TM_Q5wkpxktOdTGvlSRo9bzt9aw_0[148];
 NTI_13RNkKqUOX1TtorOUlKtqA_.size = sizeof(RootObj);
 NTI_13RNkKqUOX1TtorOUlKtqA_.kind = 17;
 NTI_13RNkKqUOX1TtorOUlKtqA_.base = 0;
@@ -14710,6 +14749,23 @@ NTI_yCEN9anxCD6mzBxGjuaRBdg_.size = sizeof(tyObject_ValueError_Gi06FkNeykJn7mrqR
 NTI_yCEN9anxCD6mzBxGjuaRBdg_.kind = 22;
 NTI_yCEN9anxCD6mzBxGjuaRBdg_.base = (&NTI_Gi06FkNeykJn7mrqRZYrkA_);
 NTI_yCEN9anxCD6mzBxGjuaRBdg_.marker = Marker_tyRef_yCEN9anxCD6mzBxGjuaRBdg;
+NTI_Qx9aKy4vZ9bVz9bnG9brQcRHGA_.size = sizeof(tyObject_OSError_3XwRQvmzCEOC4QnT706q1g*);
+NTI_Qx9aKy4vZ9bVz9bnG9brQcRHGA_.kind = 22;
+NTI_Qx9aKy4vZ9bVz9bnG9brQcRHGA_.base = (&NTI_3XwRQvmzCEOC4QnT706q1g_);
+NTI_Qx9aKy4vZ9bVz9bnG9brQcRHGA_.marker = Marker_tyRef_Qx9aKy4vZ9bVz9bnG9brQcRHGA;
+NTI_9bz2muykEFR6eMHxLnfcjxA_.size = sizeof(void*);
+NTI_9bz2muykEFR6eMHxLnfcjxA_.kind = 18;
+NTI_9bz2muykEFR6eMHxLnfcjxA_.base = 0;
+NTI_9bz2muykEFR6eMHxLnfcjxA_.flags = 3;
+NTI_9bz2muykEFR6eMHxLnfcjxA_.node = &TM_Q5wkpxktOdTGvlSRo9bzt9aw_0[147];
+NTI_7BHnQsEj49a9c6QtudqWTo1w_.size = sizeof(FILE*);
+NTI_7BHnQsEj49a9c6QtudqWTo1w_.kind = 21;
+NTI_7BHnQsEj49a9c6QtudqWTo1w_.base = (&NTI_9bz2muykEFR6eMHxLnfcjxA_);
+NTI_7BHnQsEj49a9c6QtudqWTo1w_.flags = 3;
+NTI_nmiMWKVIe46vacnhAFrQvw_.size = sizeof(NIM_CHAR);
+NTI_nmiMWKVIe46vacnhAFrQvw_.kind = 2;
+NTI_nmiMWKVIe46vacnhAFrQvw_.base = 0;
+NTI_nmiMWKVIe46vacnhAFrQvw_.flags = 3;
 NTI_Jtxj8YnZO9cu8mqaUBb1RtA_.size = sizeof(tySequence_Jtxj8YnZO9cu8mqaUBb1RtA*);
 NTI_Jtxj8YnZO9cu8mqaUBb1RtA_.kind = 24;
 NTI_Jtxj8YnZO9cu8mqaUBb1RtA_.base = (&NTI_gdWQV5cGkpq7KxGxo9aIyQQ_);

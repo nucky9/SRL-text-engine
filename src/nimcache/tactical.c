@@ -24,8 +24,11 @@ typedef struct tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9c
 typedef struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ;
 typedef struct NimStringDesc NimStringDesc;
 typedef struct TGenericSeq TGenericSeq;
+typedef struct tySequence_289bJSnZUYmUtCD0DXkXE0Q tySequence_289bJSnZUYmUtCD0DXkXE0Q;
 typedef struct TNimType TNimType;
 typedef struct TNimNode TNimNode;
+typedef struct tyTuple_q1AkG9aybyHixUsHszEiIGw tyTuple_q1AkG9aybyHixUsHszEiIGw;
+typedef NU8 tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ;
 struct TGenericSeq {
 NI len;
 NI reserved;
@@ -36,11 +39,13 @@ NIM_CHAR data[SEQ_DECL_SIZE];
 };
 typedef NU8 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ;
 struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ {
+tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ gender;
 NimStringDesc* firstName;
 NimStringDesc* lastName;
 NI experience;
 NI level;
 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ personalityType;
+tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
 typedef NU8 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA;
 struct tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg {
@@ -72,6 +77,14 @@ TNimType* typ;
 NCSTRING name;
 NI len;
 TNimNode** sons;
+};
+struct tyTuple_q1AkG9aybyHixUsHszEiIGw {
+tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ Field0;
+NI Field1;
+};
+struct tySequence_289bJSnZUYmUtCD0DXkXE0Q {
+  TGenericSeq Sup;
+  tyTuple_q1AkG9aybyHixUsHszEiIGw data[SEQ_DECL_SIZE];
 };
 N_LIB_PRIVATE N_NIMCALL(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg*, generateTacticalOfficer_mFlBFfOCjuyT9ayBO4ygTBQ)(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ* baseCrewInfo);
 N_NIMCALL(void*, newObj)(TNimType* typ, NI size);

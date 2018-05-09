@@ -17,20 +17,31 @@ type
     ptC,
     ptD,
     ptE
+  
+  Gender* = enum
+    male,
+    female
 
 type
   BaseCrewInfo* = object
+    gender*: Gender 
     firstName*: string
     lastName*: string
     experience*: int
     level*: int
     personalityType*: PersonalityType
+    personalityModifiers*: seq[tuple[personality: PersonalityType, modifier: int]]
+  
+  PersonalityModifier* = tuple[
+    personality: PersonalityType,
+    modifier: int
+  ]
 
   Captain* = ref object
     baseInfo*: BaseCrewInfo
     captainAbility*: int
     specialAbility*: SpecialAbility
-    secondaryAbilities*: seq[tuple[ability: SecondaryAbility, value: int]]
+    personalityModifiers*: seq[PersonalityModifier] 
 
   CommunicationsOfficer* = ref object
     baseInfo*: BaseCrewInfo
@@ -55,7 +66,7 @@ type
   NavigationOfficer* = ref object
     baseInfo*: BaseCrewInfo
     maneuvering*: int
-    courseSettings*: int
+    coursePlotting*: int
     sublightSpeedModifier*: int
     specialAbility*: SpecialAbility
 
@@ -80,3 +91,6 @@ type
     navigation*: NavigationOfficer
     science*: ScienceOfficer
     tactical*: TacticalOfficer
+
+const
+  personalityModifiers* = [(3, -3), (13, -2), (33, -1), (67, 0), (87, 1), (97, 2), (100, 3)]

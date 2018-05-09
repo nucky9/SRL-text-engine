@@ -20,14 +20,15 @@
 #undef near
 #undef powerpc
 #undef unix
+typedef struct tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ;
 typedef struct tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog;
 typedef struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ;
 typedef struct NimStringDesc NimStringDesc;
 typedef struct TGenericSeq TGenericSeq;
-typedef struct tySequence_GAlN8CVr46NYIZ4im9c9baNw tySequence_GAlN8CVr46NYIZ4im9c9baNw;
+typedef struct tySequence_289bJSnZUYmUtCD0DXkXE0Q tySequence_289bJSnZUYmUtCD0DXkXE0Q;
 typedef struct TNimType TNimType;
 typedef struct TNimNode TNimNode;
-typedef struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg tyTuple_hIfxrk3SgJbH9bl3niLBXLg;
+typedef struct tyTuple_q1AkG9aybyHixUsHszEiIGw tyTuple_q1AkG9aybyHixUsHszEiIGw;
 typedef struct tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ;
 typedef struct tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA;
 typedef struct tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w;
@@ -35,6 +36,12 @@ typedef struct tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3
 typedef struct tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw;
 typedef struct tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg;
 typedef struct tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA;
+struct tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ {
+NI Field0;
+NI Field1;
+};
+typedef tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ tyArray_8rChXCw9c59cXiB7dCp4nPNQ[7];
+typedef NU8 tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ;
 struct TGenericSeq {
 NI len;
 NI reserved;
@@ -45,18 +52,20 @@ NIM_CHAR data[SEQ_DECL_SIZE];
 };
 typedef NU8 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ;
 struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ {
+tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ gender;
 NimStringDesc* firstName;
 NimStringDesc* lastName;
 NI experience;
 NI level;
 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ personalityType;
+tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
 typedef NU8 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA;
 struct tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
 NI captainAbility;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
-tySequence_GAlN8CVr46NYIZ4im9c9baNw* secondaryAbilities;
+tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
 typedef NU8 tyEnum_TNimKind_jIBKr1ejBgsfM33Kxw4j7A;
 typedef NU8 tySet_tyEnum_TNimTypeFlag_v8QUszD1sWlSIWZz7mC4bQ;
@@ -81,9 +90,8 @@ NCSTRING name;
 NI len;
 TNimNode** sons;
 };
-typedef NU8 tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w;
-struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg {
-tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w Field0;
+struct tyTuple_q1AkG9aybyHixUsHszEiIGw {
+tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ Field0;
 NI Field1;
 };
 struct tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ {
@@ -109,7 +117,7 @@ tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 struct tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
 NI maneuvering;
-NI courseSettings;
+NI coursePlotting;
 NI sublightSpeedModifier;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 };
@@ -135,11 +143,11 @@ tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q* navigation;
 tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw* science;
 tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg* tactical;
 };
-struct tySequence_GAlN8CVr46NYIZ4im9c9baNw {
+struct tySequence_289bJSnZUYmUtCD0DXkXE0Q {
   TGenericSeq Sup;
-  tyTuple_hIfxrk3SgJbH9bl3niLBXLg data[SEQ_DECL_SIZE];
+  tyTuple_q1AkG9aybyHixUsHszEiIGw data[SEQ_DECL_SIZE];
 };
-static N_NIMCALL(void, Marker_tySequence_GAlN8CVr46NYIZ4im9c9baNw)(void* p, NI op);
+static N_NIMCALL(void, Marker_tySequence_289bJSnZUYmUtCD0DXkXE0Q)(void* p, NI op);
 N_NIMCALL(void, nimGCvisit)(void* d, NI op);
 static N_NIMCALL(void, Marker_tyRef_ZIWF3RAPbylxlKADfMpcCw)(void* p, NI op);
 static N_NIMCALL(void, Marker_tyRef_9b9bLL9aVzoJ5c0S8E9ajEDJXA)(void* p, NI op);
@@ -154,13 +162,13 @@ N_LIB_PRIVATE N_NOINLINE(void, stackOverflow_II46IjNZztN9bmbxUD8dt8g)(void);
 static N_INLINE(void, popFrame)(void);
 TNimType NTI_ayQkAUqJ29c1309alQMzvTog_;
 TNimType NTI_XKHobPLd3O3l3A9aqud8UbQ_;
+TNimType NTI_S8HocBi1Mqay43IDDDDmOQ_;
 extern TNimType NTI_77mFvmsOLKik79ci2hXkHEg_;
 extern TNimType NTI_rR5Bzr1D5krxoo1NcNyeMA_;
 TNimType NTI_gdWQV5cGkpq7KxGxo9aIyQQ_;
+TNimType NTI_q1AkG9aybyHixUsHszEiIGw_;
+TNimType NTI_289bJSnZUYmUtCD0DXkXE0Q_;
 TNimType NTI_hx7wZOTzQdLuVhirIVcmYA_;
-TNimType NTI_hIfxrk3SgJbH9bl3niLBXLg_;
-TNimType NTI_dwHVYTQaEvrenavHYJmo6w_;
-TNimType NTI_GAlN8CVr46NYIZ4im9c9baNw_;
 TNimType NTI_ZIWF3RAPbylxlKADfMpcCw_;
 TNimType NTI_wnFlv9aO9aNGi3o5MybXAQyQ_;
 TNimType NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_;
@@ -177,10 +185,32 @@ TNimType NTI_l6gzlXC9az4Slw0mFMjpOXQ_;
 TNimType NTI_ROIq9bhCLaVdyWYbjv0VWAA_;
 TNimType NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_;
 extern TFrame* framePtr_HRfVMH3jYeBJz6Q6X9b6Ptw;
-static N_NIMCALL(void, Marker_tySequence_GAlN8CVr46NYIZ4im9c9baNw)(void* p, NI op) {
-	tySequence_GAlN8CVr46NYIZ4im9c9baNw* a;
+NIM_CONST tyArray_8rChXCw9c59cXiB7dCp4nPNQ personalityModifiers_B3JvhT5FCLTSElf9csJ1X9cg = {{((NI) 3),
+((NI) -3)}
+,
+{((NI) 13),
+((NI) -2)}
+,
+{((NI) 33),
+((NI) -1)}
+,
+{((NI) 67),
+((NI) 0)}
+,
+{((NI) 87),
+((NI) 1)}
+,
+{((NI) 97),
+((NI) 2)}
+,
+{((NI) 100),
+((NI) 3)}
+}
+;
+static N_NIMCALL(void, Marker_tySequence_289bJSnZUYmUtCD0DXkXE0Q)(void* p, NI op) {
+	tySequence_289bJSnZUYmUtCD0DXkXE0Q* a;
 	NI T1_;
-	a = (tySequence_GAlN8CVr46NYIZ4im9c9baNw*)p;
+	a = (tySequence_289bJSnZUYmUtCD0DXkXE0Q*)p;
 	T1_ = (NI)0;
 }
 static N_NIMCALL(void, Marker_tyRef_ZIWF3RAPbylxlKADfMpcCw)(void* p, NI op) {
@@ -188,43 +218,50 @@ static N_NIMCALL(void, Marker_tyRef_ZIWF3RAPbylxlKADfMpcCw)(void* p, NI op) {
 	a = (tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
-	nimGCvisit((void*)(*a).secondaryAbilities, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
+	nimGCvisit((void*)(*a).personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_9b9bLL9aVzoJ5c0S8E9ajEDJXA)(void* p, NI op) {
 	tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ* a;
 	a = (tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_WVwu5lbbEGFe9bMbO9bJvyKQ)(void* p, NI op) {
 	tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA* a;
 	a = (tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_DgpHA2MoyK2hOMb2s4fWSw)(void* p, NI op) {
 	tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w* a;
 	a = (tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_9bn9cFcdfV2ORVXywWKHaRCg)(void* p, NI op) {
 	tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q* a;
 	a = (tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_PzqjnrSNOeItfuyXAztypw)(void* p, NI op) {
 	tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw* a;
 	a = (tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_l6gzlXC9az4Slw0mFMjpOXQ)(void* p, NI op) {
 	tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg* a;
 	a = (tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg*)p;
 	nimGCvisit((void*)(*a).baseInfo.firstName, op);
 	nimGCvisit((void*)(*a).baseInfo.lastName, op);
+	nimGCvisit((void*)(*a).baseInfo.personalityModifiers, op);
 }
 static N_NIMCALL(void, Marker_tyRef_Sp6bXpfmbsi9bgPZoqsvJIQ)(void* p, NI op) {
 	tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA* a;
@@ -271,29 +308,25 @@ NIM_EXTERNC N_NOINLINE(void, unknown_crewtypesInit000)(void) {
 
 NIM_EXTERNC N_NOINLINE(void, unknown_crewtypesDatInit000)(void) {
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_2[4];
-static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_3[5];
-static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_4[5];
+static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_3[7];
+static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_4[2];
 NI TM_QNSw4PpToST1V3OSXwiMNw_6;
-static char* NIM_CONST TM_QNSw4PpToST1V3OSXwiMNw_5[5] = {
+static char* NIM_CONST TM_QNSw4PpToST1V3OSXwiMNw_5[2] = {
+"male", 
+"female"};
+static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_7[5];
+NI TM_QNSw4PpToST1V3OSXwiMNw_9;
+static char* NIM_CONST TM_QNSw4PpToST1V3OSXwiMNw_8[5] = {
 "ptA", 
 "ptB", 
 "ptC", 
 "ptD", 
 "ptE"};
-static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_7[1];
-NI TM_QNSw4PpToST1V3OSXwiMNw_9;
-static char* NIM_CONST TM_QNSw4PpToST1V3OSXwiMNw_8[1] = {
-"asNone"};
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_10[2];
-static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_11[6];
+static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_11[1];
 NI TM_QNSw4PpToST1V3OSXwiMNw_13;
-static char* NIM_CONST TM_QNSw4PpToST1V3OSXwiMNw_12[6] = {
-"saEngineering", 
-"saScience", 
-"saWeapons", 
-"saHelm", 
-"saMedical", 
-"saCommunications"};
+static char* NIM_CONST TM_QNSw4PpToST1V3OSXwiMNw_12[1] = {
+"asNone"};
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_14[4];
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_15[5];
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_16[5];
@@ -301,7 +334,7 @@ static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_17[5];
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_18[4];
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_19[5];
 static TNimNode* TM_QNSw4PpToST1V3OSXwiMNw_20[7];
-static TNimNode TM_QNSw4PpToST1V3OSXwiMNw_0[71];
+static TNimNode TM_QNSw4PpToST1V3OSXwiMNw_0[69];
 NTI_ayQkAUqJ29c1309alQMzvTog_.size = sizeof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog);
 NTI_ayQkAUqJ29c1309alQMzvTog_.kind = 18;
 NTI_ayQkAUqJ29c1309alQMzvTog_.base = 0;
@@ -312,108 +345,118 @@ NTI_XKHobPLd3O3l3A9aqud8UbQ_.kind = 18;
 NTI_XKHobPLd3O3l3A9aqud8UbQ_.base = 0;
 NTI_XKHobPLd3O3l3A9aqud8UbQ_.flags = 2;
 TM_QNSw4PpToST1V3OSXwiMNw_3[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[3];
+NTI_S8HocBi1Mqay43IDDDDmOQ_.size = sizeof(tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ);
+NTI_S8HocBi1Mqay43IDDDDmOQ_.kind = 14;
+NTI_S8HocBi1Mqay43IDDDDmOQ_.base = 0;
+NTI_S8HocBi1Mqay43IDDDDmOQ_.flags = 3;
+for (TM_QNSw4PpToST1V3OSXwiMNw_6 = 0; TM_QNSw4PpToST1V3OSXwiMNw_6 < 2; TM_QNSw4PpToST1V3OSXwiMNw_6++) {
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+4].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+4].offset = TM_QNSw4PpToST1V3OSXwiMNw_6;
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+4].name = TM_QNSw4PpToST1V3OSXwiMNw_5[TM_QNSw4PpToST1V3OSXwiMNw_6];
+TM_QNSw4PpToST1V3OSXwiMNw_4[TM_QNSw4PpToST1V3OSXwiMNw_6] = &TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+4];
+}
+TM_QNSw4PpToST1V3OSXwiMNw_0[6].len = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[6].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[6].sons = &TM_QNSw4PpToST1V3OSXwiMNw_4[0];
+NTI_S8HocBi1Mqay43IDDDDmOQ_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[6];
 TM_QNSw4PpToST1V3OSXwiMNw_0[3].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[3].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, firstName);
-TM_QNSw4PpToST1V3OSXwiMNw_0[3].typ = (&NTI_77mFvmsOLKik79ci2hXkHEg_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[3].name = "firstName";
-TM_QNSw4PpToST1V3OSXwiMNw_3[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[4];
-TM_QNSw4PpToST1V3OSXwiMNw_0[4].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[4].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, lastName);
-TM_QNSw4PpToST1V3OSXwiMNw_0[4].typ = (&NTI_77mFvmsOLKik79ci2hXkHEg_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[4].name = "lastName";
-TM_QNSw4PpToST1V3OSXwiMNw_3[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[5];
-TM_QNSw4PpToST1V3OSXwiMNw_0[5].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[5].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, experience);
-TM_QNSw4PpToST1V3OSXwiMNw_0[5].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[5].name = "experience";
-TM_QNSw4PpToST1V3OSXwiMNw_3[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[6];
-TM_QNSw4PpToST1V3OSXwiMNw_0[6].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[6].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, level);
-TM_QNSw4PpToST1V3OSXwiMNw_0[6].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[6].name = "level";
-TM_QNSw4PpToST1V3OSXwiMNw_3[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[7];
+TM_QNSw4PpToST1V3OSXwiMNw_0[3].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, gender);
+TM_QNSw4PpToST1V3OSXwiMNw_0[3].typ = (&NTI_S8HocBi1Mqay43IDDDDmOQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[3].name = "gender";
+TM_QNSw4PpToST1V3OSXwiMNw_3[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[7];
+TM_QNSw4PpToST1V3OSXwiMNw_0[7].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[7].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, firstName);
+TM_QNSw4PpToST1V3OSXwiMNw_0[7].typ = (&NTI_77mFvmsOLKik79ci2hXkHEg_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[7].name = "firstName";
+TM_QNSw4PpToST1V3OSXwiMNw_3[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[8];
+TM_QNSw4PpToST1V3OSXwiMNw_0[8].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[8].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, lastName);
+TM_QNSw4PpToST1V3OSXwiMNw_0[8].typ = (&NTI_77mFvmsOLKik79ci2hXkHEg_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[8].name = "lastName";
+TM_QNSw4PpToST1V3OSXwiMNw_3[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[9];
+TM_QNSw4PpToST1V3OSXwiMNw_0[9].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[9].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, experience);
+TM_QNSw4PpToST1V3OSXwiMNw_0[9].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[9].name = "experience";
+TM_QNSw4PpToST1V3OSXwiMNw_3[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[10];
+TM_QNSw4PpToST1V3OSXwiMNw_0[10].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[10].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, level);
+TM_QNSw4PpToST1V3OSXwiMNw_0[10].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[10].name = "level";
+TM_QNSw4PpToST1V3OSXwiMNw_3[5] = &TM_QNSw4PpToST1V3OSXwiMNw_0[11];
 NTI_gdWQV5cGkpq7KxGxo9aIyQQ_.size = sizeof(tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ);
 NTI_gdWQV5cGkpq7KxGxo9aIyQQ_.kind = 14;
 NTI_gdWQV5cGkpq7KxGxo9aIyQQ_.base = 0;
 NTI_gdWQV5cGkpq7KxGxo9aIyQQ_.flags = 3;
-for (TM_QNSw4PpToST1V3OSXwiMNw_6 = 0; TM_QNSw4PpToST1V3OSXwiMNw_6 < 5; TM_QNSw4PpToST1V3OSXwiMNw_6++) {
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+8].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+8].offset = TM_QNSw4PpToST1V3OSXwiMNw_6;
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+8].name = TM_QNSw4PpToST1V3OSXwiMNw_5[TM_QNSw4PpToST1V3OSXwiMNw_6];
-TM_QNSw4PpToST1V3OSXwiMNw_4[TM_QNSw4PpToST1V3OSXwiMNw_6] = &TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_6+8];
+for (TM_QNSw4PpToST1V3OSXwiMNw_9 = 0; TM_QNSw4PpToST1V3OSXwiMNw_9 < 5; TM_QNSw4PpToST1V3OSXwiMNw_9++) {
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+12].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+12].offset = TM_QNSw4PpToST1V3OSXwiMNw_9;
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+12].name = TM_QNSw4PpToST1V3OSXwiMNw_8[TM_QNSw4PpToST1V3OSXwiMNw_9];
+TM_QNSw4PpToST1V3OSXwiMNw_7[TM_QNSw4PpToST1V3OSXwiMNw_9] = &TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+12];
 }
-TM_QNSw4PpToST1V3OSXwiMNw_0[13].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[13].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[13].sons = &TM_QNSw4PpToST1V3OSXwiMNw_4[0];
-NTI_gdWQV5cGkpq7KxGxo9aIyQQ_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[13];
-TM_QNSw4PpToST1V3OSXwiMNw_0[7].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[7].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, personalityType);
-TM_QNSw4PpToST1V3OSXwiMNw_0[7].typ = (&NTI_gdWQV5cGkpq7KxGxo9aIyQQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[7].name = "personalityType";
-TM_QNSw4PpToST1V3OSXwiMNw_0[2].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[2].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[2].sons = &TM_QNSw4PpToST1V3OSXwiMNw_3[0];
+TM_QNSw4PpToST1V3OSXwiMNw_0[17].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[17].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[17].sons = &TM_QNSw4PpToST1V3OSXwiMNw_7[0];
+NTI_gdWQV5cGkpq7KxGxo9aIyQQ_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[17];
+TM_QNSw4PpToST1V3OSXwiMNw_0[11].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[11].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, personalityType);
+TM_QNSw4PpToST1V3OSXwiMNw_0[11].typ = (&NTI_gdWQV5cGkpq7KxGxo9aIyQQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[11].name = "personalityType";
+TM_QNSw4PpToST1V3OSXwiMNw_3[6] = &TM_QNSw4PpToST1V3OSXwiMNw_0[18];
+NTI_q1AkG9aybyHixUsHszEiIGw_.size = sizeof(tyTuple_q1AkG9aybyHixUsHszEiIGw);
+NTI_q1AkG9aybyHixUsHszEiIGw_.kind = 18;
+NTI_q1AkG9aybyHixUsHszEiIGw_.base = 0;
+NTI_q1AkG9aybyHixUsHszEiIGw_.flags = 3;
+TM_QNSw4PpToST1V3OSXwiMNw_10[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[20];
+TM_QNSw4PpToST1V3OSXwiMNw_0[20].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[20].offset = offsetof(tyTuple_q1AkG9aybyHixUsHszEiIGw, Field0);
+TM_QNSw4PpToST1V3OSXwiMNw_0[20].typ = (&NTI_gdWQV5cGkpq7KxGxo9aIyQQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[20].name = "Field0";
+TM_QNSw4PpToST1V3OSXwiMNw_10[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[21];
+TM_QNSw4PpToST1V3OSXwiMNw_0[21].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[21].offset = offsetof(tyTuple_q1AkG9aybyHixUsHszEiIGw, Field1);
+TM_QNSw4PpToST1V3OSXwiMNw_0[21].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[21].name = "Field1";
+TM_QNSw4PpToST1V3OSXwiMNw_0[19].len = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[19].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[19].sons = &TM_QNSw4PpToST1V3OSXwiMNw_10[0];
+NTI_q1AkG9aybyHixUsHszEiIGw_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[19];
+NTI_289bJSnZUYmUtCD0DXkXE0Q_.size = sizeof(tySequence_289bJSnZUYmUtCD0DXkXE0Q*);
+NTI_289bJSnZUYmUtCD0DXkXE0Q_.kind = 24;
+NTI_289bJSnZUYmUtCD0DXkXE0Q_.base = (&NTI_q1AkG9aybyHixUsHszEiIGw_);
+NTI_289bJSnZUYmUtCD0DXkXE0Q_.flags = 2;
+NTI_289bJSnZUYmUtCD0DXkXE0Q_.marker = Marker_tySequence_289bJSnZUYmUtCD0DXkXE0Q;
+TM_QNSw4PpToST1V3OSXwiMNw_0[18].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[18].offset = offsetof(tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ, personalityModifiers);
+TM_QNSw4PpToST1V3OSXwiMNw_0[18].typ = (&NTI_289bJSnZUYmUtCD0DXkXE0Q_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[18].name = "personalityModifiers";
+TM_QNSw4PpToST1V3OSXwiMNw_0[2].len = 7; TM_QNSw4PpToST1V3OSXwiMNw_0[2].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[2].sons = &TM_QNSw4PpToST1V3OSXwiMNw_3[0];
 NTI_XKHobPLd3O3l3A9aqud8UbQ_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[2];
 TM_QNSw4PpToST1V3OSXwiMNw_0[1].kind = 1;
 TM_QNSw4PpToST1V3OSXwiMNw_0[1].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, baseInfo);
 TM_QNSw4PpToST1V3OSXwiMNw_0[1].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
 TM_QNSw4PpToST1V3OSXwiMNw_0[1].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_2[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[14];
-TM_QNSw4PpToST1V3OSXwiMNw_0[14].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[14].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, captainAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[14].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[14].name = "captainAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_2[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[15];
+TM_QNSw4PpToST1V3OSXwiMNw_2[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[22];
+TM_QNSw4PpToST1V3OSXwiMNw_0[22].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[22].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, captainAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[22].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[22].name = "captainAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_2[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[23];
 NTI_hx7wZOTzQdLuVhirIVcmYA_.size = sizeof(tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA);
 NTI_hx7wZOTzQdLuVhirIVcmYA_.kind = 14;
 NTI_hx7wZOTzQdLuVhirIVcmYA_.base = 0;
 NTI_hx7wZOTzQdLuVhirIVcmYA_.flags = 3;
-for (TM_QNSw4PpToST1V3OSXwiMNw_9 = 0; TM_QNSw4PpToST1V3OSXwiMNw_9 < 1; TM_QNSw4PpToST1V3OSXwiMNw_9++) {
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+16].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+16].offset = TM_QNSw4PpToST1V3OSXwiMNw_9;
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+16].name = TM_QNSw4PpToST1V3OSXwiMNw_8[TM_QNSw4PpToST1V3OSXwiMNw_9];
-TM_QNSw4PpToST1V3OSXwiMNw_7[TM_QNSw4PpToST1V3OSXwiMNw_9] = &TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_9+16];
+for (TM_QNSw4PpToST1V3OSXwiMNw_13 = 0; TM_QNSw4PpToST1V3OSXwiMNw_13 < 1; TM_QNSw4PpToST1V3OSXwiMNw_13++) {
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+24].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+24].offset = TM_QNSw4PpToST1V3OSXwiMNw_13;
+TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+24].name = TM_QNSw4PpToST1V3OSXwiMNw_12[TM_QNSw4PpToST1V3OSXwiMNw_13];
+TM_QNSw4PpToST1V3OSXwiMNw_11[TM_QNSw4PpToST1V3OSXwiMNw_13] = &TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+24];
 }
-TM_QNSw4PpToST1V3OSXwiMNw_0[17].len = 1; TM_QNSw4PpToST1V3OSXwiMNw_0[17].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[17].sons = &TM_QNSw4PpToST1V3OSXwiMNw_7[0];
-NTI_hx7wZOTzQdLuVhirIVcmYA_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[17];
-TM_QNSw4PpToST1V3OSXwiMNw_0[15].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[15].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[15].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[15].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_2[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[18];
-NTI_hIfxrk3SgJbH9bl3niLBXLg_.size = sizeof(tyTuple_hIfxrk3SgJbH9bl3niLBXLg);
-NTI_hIfxrk3SgJbH9bl3niLBXLg_.kind = 18;
-NTI_hIfxrk3SgJbH9bl3niLBXLg_.base = 0;
-NTI_hIfxrk3SgJbH9bl3niLBXLg_.flags = 3;
-TM_QNSw4PpToST1V3OSXwiMNw_10[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[20];
-NTI_dwHVYTQaEvrenavHYJmo6w_.size = sizeof(tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w);
-NTI_dwHVYTQaEvrenavHYJmo6w_.kind = 14;
-NTI_dwHVYTQaEvrenavHYJmo6w_.base = 0;
-NTI_dwHVYTQaEvrenavHYJmo6w_.flags = 3;
-for (TM_QNSw4PpToST1V3OSXwiMNw_13 = 0; TM_QNSw4PpToST1V3OSXwiMNw_13 < 6; TM_QNSw4PpToST1V3OSXwiMNw_13++) {
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+21].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+21].offset = TM_QNSw4PpToST1V3OSXwiMNw_13;
-TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+21].name = TM_QNSw4PpToST1V3OSXwiMNw_12[TM_QNSw4PpToST1V3OSXwiMNw_13];
-TM_QNSw4PpToST1V3OSXwiMNw_11[TM_QNSw4PpToST1V3OSXwiMNw_13] = &TM_QNSw4PpToST1V3OSXwiMNw_0[TM_QNSw4PpToST1V3OSXwiMNw_13+21];
-}
-TM_QNSw4PpToST1V3OSXwiMNw_0[27].len = 6; TM_QNSw4PpToST1V3OSXwiMNw_0[27].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[27].sons = &TM_QNSw4PpToST1V3OSXwiMNw_11[0];
-NTI_dwHVYTQaEvrenavHYJmo6w_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[27];
-TM_QNSw4PpToST1V3OSXwiMNw_0[20].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[20].offset = offsetof(tyTuple_hIfxrk3SgJbH9bl3niLBXLg, Field0);
-TM_QNSw4PpToST1V3OSXwiMNw_0[20].typ = (&NTI_dwHVYTQaEvrenavHYJmo6w_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[20].name = "Field0";
-TM_QNSw4PpToST1V3OSXwiMNw_10[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[28];
-TM_QNSw4PpToST1V3OSXwiMNw_0[28].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[28].offset = offsetof(tyTuple_hIfxrk3SgJbH9bl3niLBXLg, Field1);
-TM_QNSw4PpToST1V3OSXwiMNw_0[28].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[28].name = "Field1";
-TM_QNSw4PpToST1V3OSXwiMNw_0[19].len = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[19].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[19].sons = &TM_QNSw4PpToST1V3OSXwiMNw_10[0];
-NTI_hIfxrk3SgJbH9bl3niLBXLg_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[19];
-NTI_GAlN8CVr46NYIZ4im9c9baNw_.size = sizeof(tySequence_GAlN8CVr46NYIZ4im9c9baNw*);
-NTI_GAlN8CVr46NYIZ4im9c9baNw_.kind = 24;
-NTI_GAlN8CVr46NYIZ4im9c9baNw_.base = (&NTI_hIfxrk3SgJbH9bl3niLBXLg_);
-NTI_GAlN8CVr46NYIZ4im9c9baNw_.flags = 2;
-NTI_GAlN8CVr46NYIZ4im9c9baNw_.marker = Marker_tySequence_GAlN8CVr46NYIZ4im9c9baNw;
-TM_QNSw4PpToST1V3OSXwiMNw_0[18].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[18].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, secondaryAbilities);
-TM_QNSw4PpToST1V3OSXwiMNw_0[18].typ = (&NTI_GAlN8CVr46NYIZ4im9c9baNw_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[18].name = "secondaryAbilities";
+TM_QNSw4PpToST1V3OSXwiMNw_0[25].len = 1; TM_QNSw4PpToST1V3OSXwiMNw_0[25].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[25].sons = &TM_QNSw4PpToST1V3OSXwiMNw_11[0];
+NTI_hx7wZOTzQdLuVhirIVcmYA_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[25];
+TM_QNSw4PpToST1V3OSXwiMNw_0[23].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[23].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[23].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[23].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_2[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[26];
+TM_QNSw4PpToST1V3OSXwiMNw_0[26].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[26].offset = offsetof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog, personalityModifiers);
+TM_QNSw4PpToST1V3OSXwiMNw_0[26].typ = (&NTI_289bJSnZUYmUtCD0DXkXE0Q_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[26].name = "personalityModifiers";
 TM_QNSw4PpToST1V3OSXwiMNw_0[0].len = 4; TM_QNSw4PpToST1V3OSXwiMNw_0[0].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[0].sons = &TM_QNSw4PpToST1V3OSXwiMNw_2[0];
 NTI_ayQkAUqJ29c1309alQMzvTog_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[0];
 NTI_ZIWF3RAPbylxlKADfMpcCw_.size = sizeof(tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog*);
@@ -425,28 +468,28 @@ NTI_wnFlv9aO9aNGi3o5MybXAQyQ_.size = sizeof(tyObject_CommunicationsOfficercolonO
 NTI_wnFlv9aO9aNGi3o5MybXAQyQ_.kind = 18;
 NTI_wnFlv9aO9aNGi3o5MybXAQyQ_.base = 0;
 NTI_wnFlv9aO9aNGi3o5MybXAQyQ_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_14[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[30];
+TM_QNSw4PpToST1V3OSXwiMNw_14[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[28];
+TM_QNSw4PpToST1V3OSXwiMNw_0[28].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[28].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, baseInfo);
+TM_QNSw4PpToST1V3OSXwiMNw_0[28].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[28].name = "baseInfo";
+TM_QNSw4PpToST1V3OSXwiMNw_14[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[29];
+TM_QNSw4PpToST1V3OSXwiMNw_0[29].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[29].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, diplomacy);
+TM_QNSw4PpToST1V3OSXwiMNw_0[29].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[29].name = "diplomacy";
+TM_QNSw4PpToST1V3OSXwiMNw_14[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[30];
 TM_QNSw4PpToST1V3OSXwiMNw_0[30].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[30].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, baseInfo);
-TM_QNSw4PpToST1V3OSXwiMNw_0[30].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[30].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_14[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[31];
+TM_QNSw4PpToST1V3OSXwiMNw_0[30].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, linguisticAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[30].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[30].name = "linguisticAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_14[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[31];
 TM_QNSw4PpToST1V3OSXwiMNw_0[31].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[31].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, diplomacy);
-TM_QNSw4PpToST1V3OSXwiMNw_0[31].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[31].name = "diplomacy";
-TM_QNSw4PpToST1V3OSXwiMNw_14[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[32];
-TM_QNSw4PpToST1V3OSXwiMNw_0[32].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[32].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, linguisticAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[32].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[32].name = "linguisticAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_14[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[33];
-TM_QNSw4PpToST1V3OSXwiMNw_0[33].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[33].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[33].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[33].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_0[29].len = 4; TM_QNSw4PpToST1V3OSXwiMNw_0[29].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[29].sons = &TM_QNSw4PpToST1V3OSXwiMNw_14[0];
-NTI_wnFlv9aO9aNGi3o5MybXAQyQ_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[29];
+TM_QNSw4PpToST1V3OSXwiMNw_0[31].offset = offsetof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[31].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[31].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_0[27].len = 4; TM_QNSw4PpToST1V3OSXwiMNw_0[27].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[27].sons = &TM_QNSw4PpToST1V3OSXwiMNw_14[0];
+NTI_wnFlv9aO9aNGi3o5MybXAQyQ_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[27];
 NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_.size = sizeof(tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ*);
 NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_.kind = 22;
 NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_.base = (&NTI_wnFlv9aO9aNGi3o5MybXAQyQ_);
@@ -456,33 +499,33 @@ NTI_8liM6t47WLrUSyikv8cHkA_.size = sizeof(tyObject_EngineeringOfficercolonObject
 NTI_8liM6t47WLrUSyikv8cHkA_.kind = 18;
 NTI_8liM6t47WLrUSyikv8cHkA_.base = 0;
 NTI_8liM6t47WLrUSyikv8cHkA_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_15[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[35];
+TM_QNSw4PpToST1V3OSXwiMNw_15[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[33];
+TM_QNSw4PpToST1V3OSXwiMNw_0[33].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[33].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, baseInfo);
+TM_QNSw4PpToST1V3OSXwiMNw_0[33].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[33].name = "baseInfo";
+TM_QNSw4PpToST1V3OSXwiMNw_15[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[34];
+TM_QNSw4PpToST1V3OSXwiMNw_0[34].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[34].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, powerManagement);
+TM_QNSw4PpToST1V3OSXwiMNw_0[34].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[34].name = "powerManagement";
+TM_QNSw4PpToST1V3OSXwiMNw_15[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[35];
 TM_QNSw4PpToST1V3OSXwiMNw_0[35].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[35].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, baseInfo);
-TM_QNSw4PpToST1V3OSXwiMNw_0[35].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[35].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_15[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[36];
+TM_QNSw4PpToST1V3OSXwiMNw_0[35].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, Repair);
+TM_QNSw4PpToST1V3OSXwiMNw_0[35].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[35].name = "Repair";
+TM_QNSw4PpToST1V3OSXwiMNw_15[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[36];
 TM_QNSw4PpToST1V3OSXwiMNw_0[36].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[36].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, powerManagement);
+TM_QNSw4PpToST1V3OSXwiMNw_0[36].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, shipImprovements);
 TM_QNSw4PpToST1V3OSXwiMNw_0[36].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[36].name = "powerManagement";
-TM_QNSw4PpToST1V3OSXwiMNw_15[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[37];
+TM_QNSw4PpToST1V3OSXwiMNw_0[36].name = "shipImprovements";
+TM_QNSw4PpToST1V3OSXwiMNw_15[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[37];
 TM_QNSw4PpToST1V3OSXwiMNw_0[37].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[37].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, Repair);
-TM_QNSw4PpToST1V3OSXwiMNw_0[37].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[37].name = "Repair";
-TM_QNSw4PpToST1V3OSXwiMNw_15[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[38];
-TM_QNSw4PpToST1V3OSXwiMNw_0[38].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[38].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, shipImprovements);
-TM_QNSw4PpToST1V3OSXwiMNw_0[38].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[38].name = "shipImprovements";
-TM_QNSw4PpToST1V3OSXwiMNw_15[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[39];
-TM_QNSw4PpToST1V3OSXwiMNw_0[39].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[39].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[39].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[39].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_0[34].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[34].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[34].sons = &TM_QNSw4PpToST1V3OSXwiMNw_15[0];
-NTI_8liM6t47WLrUSyikv8cHkA_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[34];
+TM_QNSw4PpToST1V3OSXwiMNw_0[37].offset = offsetof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[37].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[37].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_0[32].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[32].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[32].sons = &TM_QNSw4PpToST1V3OSXwiMNw_15[0];
+NTI_8liM6t47WLrUSyikv8cHkA_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[32];
 NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_.size = sizeof(tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA*);
 NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_.kind = 22;
 NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_.base = (&NTI_8liM6t47WLrUSyikv8cHkA_);
@@ -492,33 +535,33 @@ NTI_C9c0kCMAVqkylAo9bZzRDI5w_.size = sizeof(tyObject_MedicalOfficercolonObjectTy
 NTI_C9c0kCMAVqkylAo9bZzRDI5w_.kind = 18;
 NTI_C9c0kCMAVqkylAo9bZzRDI5w_.base = 0;
 NTI_C9c0kCMAVqkylAo9bZzRDI5w_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_16[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[41];
+TM_QNSw4PpToST1V3OSXwiMNw_16[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[39];
+TM_QNSw4PpToST1V3OSXwiMNw_0[39].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[39].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, baseInfo);
+TM_QNSw4PpToST1V3OSXwiMNw_0[39].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[39].name = "baseInfo";
+TM_QNSw4PpToST1V3OSXwiMNw_16[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[40];
+TM_QNSw4PpToST1V3OSXwiMNw_0[40].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[40].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, surgicalAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[40].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[40].name = "surgicalAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_16[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[41];
 TM_QNSw4PpToST1V3OSXwiMNw_0[41].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[41].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, baseInfo);
-TM_QNSw4PpToST1V3OSXwiMNw_0[41].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[41].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_16[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[42];
+TM_QNSw4PpToST1V3OSXwiMNw_0[41].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, diseaseAnalysis);
+TM_QNSw4PpToST1V3OSXwiMNw_0[41].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[41].name = "diseaseAnalysis";
+TM_QNSw4PpToST1V3OSXwiMNw_16[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[42];
 TM_QNSw4PpToST1V3OSXwiMNw_0[42].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[42].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, surgicalAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[42].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, scienceBonus);
 TM_QNSw4PpToST1V3OSXwiMNw_0[42].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[42].name = "surgicalAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_16[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[43];
+TM_QNSw4PpToST1V3OSXwiMNw_0[42].name = "scienceBonus";
+TM_QNSw4PpToST1V3OSXwiMNw_16[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[43];
 TM_QNSw4PpToST1V3OSXwiMNw_0[43].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[43].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, diseaseAnalysis);
-TM_QNSw4PpToST1V3OSXwiMNw_0[43].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[43].name = "diseaseAnalysis";
-TM_QNSw4PpToST1V3OSXwiMNw_16[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[44];
-TM_QNSw4PpToST1V3OSXwiMNw_0[44].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[44].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, scienceBonus);
-TM_QNSw4PpToST1V3OSXwiMNw_0[44].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[44].name = "scienceBonus";
-TM_QNSw4PpToST1V3OSXwiMNw_16[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[45];
-TM_QNSw4PpToST1V3OSXwiMNw_0[45].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[45].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[45].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[45].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_0[40].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[40].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[40].sons = &TM_QNSw4PpToST1V3OSXwiMNw_16[0];
-NTI_C9c0kCMAVqkylAo9bZzRDI5w_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[40];
+TM_QNSw4PpToST1V3OSXwiMNw_0[43].offset = offsetof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[43].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[43].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_0[38].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[38].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[38].sons = &TM_QNSw4PpToST1V3OSXwiMNw_16[0];
+NTI_C9c0kCMAVqkylAo9bZzRDI5w_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[38];
 NTI_DgpHA2MoyK2hOMb2s4fWSw_.size = sizeof(tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w*);
 NTI_DgpHA2MoyK2hOMb2s4fWSw_.kind = 22;
 NTI_DgpHA2MoyK2hOMb2s4fWSw_.base = (&NTI_C9c0kCMAVqkylAo9bZzRDI5w_);
@@ -528,33 +571,33 @@ NTI_2TU9cTQpfMOQw06LCgDZx3Q_.size = sizeof(tyObject_NavigationOfficercolonObject
 NTI_2TU9cTQpfMOQw06LCgDZx3Q_.kind = 18;
 NTI_2TU9cTQpfMOQw06LCgDZx3Q_.base = 0;
 NTI_2TU9cTQpfMOQw06LCgDZx3Q_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_17[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[47];
+TM_QNSw4PpToST1V3OSXwiMNw_17[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[45];
+TM_QNSw4PpToST1V3OSXwiMNw_0[45].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[45].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, baseInfo);
+TM_QNSw4PpToST1V3OSXwiMNw_0[45].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[45].name = "baseInfo";
+TM_QNSw4PpToST1V3OSXwiMNw_17[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[46];
+TM_QNSw4PpToST1V3OSXwiMNw_0[46].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[46].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, maneuvering);
+TM_QNSw4PpToST1V3OSXwiMNw_0[46].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[46].name = "maneuvering";
+TM_QNSw4PpToST1V3OSXwiMNw_17[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[47];
 TM_QNSw4PpToST1V3OSXwiMNw_0[47].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[47].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, baseInfo);
-TM_QNSw4PpToST1V3OSXwiMNw_0[47].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[47].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_17[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[48];
+TM_QNSw4PpToST1V3OSXwiMNw_0[47].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, coursePlotting);
+TM_QNSw4PpToST1V3OSXwiMNw_0[47].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[47].name = "coursePlotting";
+TM_QNSw4PpToST1V3OSXwiMNw_17[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[48];
 TM_QNSw4PpToST1V3OSXwiMNw_0[48].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[48].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, maneuvering);
+TM_QNSw4PpToST1V3OSXwiMNw_0[48].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, sublightSpeedModifier);
 TM_QNSw4PpToST1V3OSXwiMNw_0[48].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[48].name = "maneuvering";
-TM_QNSw4PpToST1V3OSXwiMNw_17[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[49];
+TM_QNSw4PpToST1V3OSXwiMNw_0[48].name = "sublightSpeedModifier";
+TM_QNSw4PpToST1V3OSXwiMNw_17[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[49];
 TM_QNSw4PpToST1V3OSXwiMNw_0[49].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[49].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, courseSettings);
-TM_QNSw4PpToST1V3OSXwiMNw_0[49].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[49].name = "courseSettings";
-TM_QNSw4PpToST1V3OSXwiMNw_17[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[50];
-TM_QNSw4PpToST1V3OSXwiMNw_0[50].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[50].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, sublightSpeedModifier);
-TM_QNSw4PpToST1V3OSXwiMNw_0[50].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[50].name = "sublightSpeedModifier";
-TM_QNSw4PpToST1V3OSXwiMNw_17[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[51];
-TM_QNSw4PpToST1V3OSXwiMNw_0[51].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[51].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[51].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[51].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_0[46].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[46].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[46].sons = &TM_QNSw4PpToST1V3OSXwiMNw_17[0];
-NTI_2TU9cTQpfMOQw06LCgDZx3Q_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[46];
+TM_QNSw4PpToST1V3OSXwiMNw_0[49].offset = offsetof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[49].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[49].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_0[44].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[44].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[44].sons = &TM_QNSw4PpToST1V3OSXwiMNw_17[0];
+NTI_2TU9cTQpfMOQw06LCgDZx3Q_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[44];
 NTI_9bn9cFcdfV2ORVXywWKHaRCg_.size = sizeof(tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q*);
 NTI_9bn9cFcdfV2ORVXywWKHaRCg_.kind = 22;
 NTI_9bn9cFcdfV2ORVXywWKHaRCg_.base = (&NTI_2TU9cTQpfMOQw06LCgDZx3Q_);
@@ -564,28 +607,28 @@ NTI_fSGVZJXYXAS4sa5877WqRw_.size = sizeof(tyObject_ScienceOfficercolonObjectType
 NTI_fSGVZJXYXAS4sa5877WqRw_.kind = 18;
 NTI_fSGVZJXYXAS4sa5877WqRw_.base = 0;
 NTI_fSGVZJXYXAS4sa5877WqRw_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_18[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[53];
+TM_QNSw4PpToST1V3OSXwiMNw_18[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[51];
+TM_QNSw4PpToST1V3OSXwiMNw_0[51].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[51].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, baseInfo);
+TM_QNSw4PpToST1V3OSXwiMNw_0[51].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[51].name = "baseInfo";
+TM_QNSw4PpToST1V3OSXwiMNw_18[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[52];
+TM_QNSw4PpToST1V3OSXwiMNw_0[52].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[52].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, exploration);
+TM_QNSw4PpToST1V3OSXwiMNw_0[52].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[52].name = "exploration";
+TM_QNSw4PpToST1V3OSXwiMNw_18[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[53];
 TM_QNSw4PpToST1V3OSXwiMNw_0[53].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[53].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, baseInfo);
-TM_QNSw4PpToST1V3OSXwiMNw_0[53].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[53].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_18[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[54];
+TM_QNSw4PpToST1V3OSXwiMNw_0[53].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, problemSolving);
+TM_QNSw4PpToST1V3OSXwiMNw_0[53].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[53].name = "problemSolving";
+TM_QNSw4PpToST1V3OSXwiMNw_18[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[54];
 TM_QNSw4PpToST1V3OSXwiMNw_0[54].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[54].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, exploration);
-TM_QNSw4PpToST1V3OSXwiMNw_0[54].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[54].name = "exploration";
-TM_QNSw4PpToST1V3OSXwiMNw_18[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[55];
-TM_QNSw4PpToST1V3OSXwiMNw_0[55].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[55].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, problemSolving);
-TM_QNSw4PpToST1V3OSXwiMNw_0[55].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[55].name = "problemSolving";
-TM_QNSw4PpToST1V3OSXwiMNw_18[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[56];
-TM_QNSw4PpToST1V3OSXwiMNw_0[56].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[56].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[56].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[56].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_0[52].len = 4; TM_QNSw4PpToST1V3OSXwiMNw_0[52].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[52].sons = &TM_QNSw4PpToST1V3OSXwiMNw_18[0];
-NTI_fSGVZJXYXAS4sa5877WqRw_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[52];
+TM_QNSw4PpToST1V3OSXwiMNw_0[54].offset = offsetof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[54].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[54].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_0[50].len = 4; TM_QNSw4PpToST1V3OSXwiMNw_0[50].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[50].sons = &TM_QNSw4PpToST1V3OSXwiMNw_18[0];
+NTI_fSGVZJXYXAS4sa5877WqRw_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[50];
 NTI_PzqjnrSNOeItfuyXAztypw_.size = sizeof(tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw*);
 NTI_PzqjnrSNOeItfuyXAztypw_.kind = 22;
 NTI_PzqjnrSNOeItfuyXAztypw_.base = (&NTI_fSGVZJXYXAS4sa5877WqRw_);
@@ -595,33 +638,33 @@ NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_.size = sizeof(tyObject_TacticalOfficercolonObject
 NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_.kind = 18;
 NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_.base = 0;
 NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_19[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[58];
+TM_QNSw4PpToST1V3OSXwiMNw_19[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[56];
+TM_QNSw4PpToST1V3OSXwiMNw_0[56].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[56].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, baseInfo);
+TM_QNSw4PpToST1V3OSXwiMNw_0[56].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[56].name = "baseInfo";
+TM_QNSw4PpToST1V3OSXwiMNw_19[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[57];
+TM_QNSw4PpToST1V3OSXwiMNw_0[57].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[57].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, targetting);
+TM_QNSw4PpToST1V3OSXwiMNw_0[57].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[57].name = "targetting";
+TM_QNSw4PpToST1V3OSXwiMNw_19[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[58];
 TM_QNSw4PpToST1V3OSXwiMNw_0[58].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[58].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, baseInfo);
-TM_QNSw4PpToST1V3OSXwiMNw_0[58].typ = (&NTI_XKHobPLd3O3l3A9aqud8UbQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[58].name = "baseInfo";
-TM_QNSw4PpToST1V3OSXwiMNw_19[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[59];
+TM_QNSw4PpToST1V3OSXwiMNw_0[58].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, shieldModulation);
+TM_QNSw4PpToST1V3OSXwiMNw_0[58].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[58].name = "shieldModulation";
+TM_QNSw4PpToST1V3OSXwiMNw_19[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[59];
 TM_QNSw4PpToST1V3OSXwiMNw_0[59].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[59].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, targetting);
+TM_QNSw4PpToST1V3OSXwiMNw_0[59].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, security);
 TM_QNSw4PpToST1V3OSXwiMNw_0[59].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[59].name = "targetting";
-TM_QNSw4PpToST1V3OSXwiMNw_19[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[60];
+TM_QNSw4PpToST1V3OSXwiMNw_0[59].name = "security";
+TM_QNSw4PpToST1V3OSXwiMNw_19[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[60];
 TM_QNSw4PpToST1V3OSXwiMNw_0[60].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[60].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, shieldModulation);
-TM_QNSw4PpToST1V3OSXwiMNw_0[60].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[60].name = "shieldModulation";
-TM_QNSw4PpToST1V3OSXwiMNw_19[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[61];
-TM_QNSw4PpToST1V3OSXwiMNw_0[61].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[61].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, security);
-TM_QNSw4PpToST1V3OSXwiMNw_0[61].typ = (&NTI_rR5Bzr1D5krxoo1NcNyeMA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[61].name = "security";
-TM_QNSw4PpToST1V3OSXwiMNw_19[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[62];
-TM_QNSw4PpToST1V3OSXwiMNw_0[62].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[62].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, specialAbility);
-TM_QNSw4PpToST1V3OSXwiMNw_0[62].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[62].name = "specialAbility";
-TM_QNSw4PpToST1V3OSXwiMNw_0[57].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[57].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[57].sons = &TM_QNSw4PpToST1V3OSXwiMNw_19[0];
-NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[57];
+TM_QNSw4PpToST1V3OSXwiMNw_0[60].offset = offsetof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg, specialAbility);
+TM_QNSw4PpToST1V3OSXwiMNw_0[60].typ = (&NTI_hx7wZOTzQdLuVhirIVcmYA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[60].name = "specialAbility";
+TM_QNSw4PpToST1V3OSXwiMNw_0[55].len = 5; TM_QNSw4PpToST1V3OSXwiMNw_0[55].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[55].sons = &TM_QNSw4PpToST1V3OSXwiMNw_19[0];
+NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[55];
 NTI_l6gzlXC9az4Slw0mFMjpOXQ_.size = sizeof(tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg*);
 NTI_l6gzlXC9az4Slw0mFMjpOXQ_.kind = 22;
 NTI_l6gzlXC9az4Slw0mFMjpOXQ_.base = (&NTI_cMpUz7QL6IsA9ckWvxIV9a9cg_);
@@ -631,43 +674,43 @@ NTI_ROIq9bhCLaVdyWYbjv0VWAA_.size = sizeof(tyObject_ShipCrewcolonObjectType__ROI
 NTI_ROIq9bhCLaVdyWYbjv0VWAA_.kind = 18;
 NTI_ROIq9bhCLaVdyWYbjv0VWAA_.base = 0;
 NTI_ROIq9bhCLaVdyWYbjv0VWAA_.flags = 2;
-TM_QNSw4PpToST1V3OSXwiMNw_20[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[64];
+TM_QNSw4PpToST1V3OSXwiMNw_20[0] = &TM_QNSw4PpToST1V3OSXwiMNw_0[62];
+TM_QNSw4PpToST1V3OSXwiMNw_0[62].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[62].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, captain);
+TM_QNSw4PpToST1V3OSXwiMNw_0[62].typ = (&NTI_ZIWF3RAPbylxlKADfMpcCw_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[62].name = "captain";
+TM_QNSw4PpToST1V3OSXwiMNw_20[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[63];
+TM_QNSw4PpToST1V3OSXwiMNw_0[63].kind = 1;
+TM_QNSw4PpToST1V3OSXwiMNw_0[63].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, communications);
+TM_QNSw4PpToST1V3OSXwiMNw_0[63].typ = (&NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[63].name = "communications";
+TM_QNSw4PpToST1V3OSXwiMNw_20[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[64];
 TM_QNSw4PpToST1V3OSXwiMNw_0[64].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[64].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, captain);
-TM_QNSw4PpToST1V3OSXwiMNw_0[64].typ = (&NTI_ZIWF3RAPbylxlKADfMpcCw_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[64].name = "captain";
-TM_QNSw4PpToST1V3OSXwiMNw_20[1] = &TM_QNSw4PpToST1V3OSXwiMNw_0[65];
+TM_QNSw4PpToST1V3OSXwiMNw_0[64].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, engineer);
+TM_QNSw4PpToST1V3OSXwiMNw_0[64].typ = (&NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[64].name = "engineer";
+TM_QNSw4PpToST1V3OSXwiMNw_20[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[65];
 TM_QNSw4PpToST1V3OSXwiMNw_0[65].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[65].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, communications);
-TM_QNSw4PpToST1V3OSXwiMNw_0[65].typ = (&NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[65].name = "communications";
-TM_QNSw4PpToST1V3OSXwiMNw_20[2] = &TM_QNSw4PpToST1V3OSXwiMNw_0[66];
+TM_QNSw4PpToST1V3OSXwiMNw_0[65].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, medical);
+TM_QNSw4PpToST1V3OSXwiMNw_0[65].typ = (&NTI_DgpHA2MoyK2hOMb2s4fWSw_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[65].name = "medical";
+TM_QNSw4PpToST1V3OSXwiMNw_20[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[66];
 TM_QNSw4PpToST1V3OSXwiMNw_0[66].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[66].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, engineer);
-TM_QNSw4PpToST1V3OSXwiMNw_0[66].typ = (&NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[66].name = "engineer";
-TM_QNSw4PpToST1V3OSXwiMNw_20[3] = &TM_QNSw4PpToST1V3OSXwiMNw_0[67];
+TM_QNSw4PpToST1V3OSXwiMNw_0[66].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, navigation);
+TM_QNSw4PpToST1V3OSXwiMNw_0[66].typ = (&NTI_9bn9cFcdfV2ORVXywWKHaRCg_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[66].name = "navigation";
+TM_QNSw4PpToST1V3OSXwiMNw_20[5] = &TM_QNSw4PpToST1V3OSXwiMNw_0[67];
 TM_QNSw4PpToST1V3OSXwiMNw_0[67].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[67].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, medical);
-TM_QNSw4PpToST1V3OSXwiMNw_0[67].typ = (&NTI_DgpHA2MoyK2hOMb2s4fWSw_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[67].name = "medical";
-TM_QNSw4PpToST1V3OSXwiMNw_20[4] = &TM_QNSw4PpToST1V3OSXwiMNw_0[68];
+TM_QNSw4PpToST1V3OSXwiMNw_0[67].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, science);
+TM_QNSw4PpToST1V3OSXwiMNw_0[67].typ = (&NTI_PzqjnrSNOeItfuyXAztypw_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[67].name = "science";
+TM_QNSw4PpToST1V3OSXwiMNw_20[6] = &TM_QNSw4PpToST1V3OSXwiMNw_0[68];
 TM_QNSw4PpToST1V3OSXwiMNw_0[68].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[68].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, navigation);
-TM_QNSw4PpToST1V3OSXwiMNw_0[68].typ = (&NTI_9bn9cFcdfV2ORVXywWKHaRCg_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[68].name = "navigation";
-TM_QNSw4PpToST1V3OSXwiMNw_20[5] = &TM_QNSw4PpToST1V3OSXwiMNw_0[69];
-TM_QNSw4PpToST1V3OSXwiMNw_0[69].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[69].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, science);
-TM_QNSw4PpToST1V3OSXwiMNw_0[69].typ = (&NTI_PzqjnrSNOeItfuyXAztypw_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[69].name = "science";
-TM_QNSw4PpToST1V3OSXwiMNw_20[6] = &TM_QNSw4PpToST1V3OSXwiMNw_0[70];
-TM_QNSw4PpToST1V3OSXwiMNw_0[70].kind = 1;
-TM_QNSw4PpToST1V3OSXwiMNw_0[70].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, tactical);
-TM_QNSw4PpToST1V3OSXwiMNw_0[70].typ = (&NTI_l6gzlXC9az4Slw0mFMjpOXQ_);
-TM_QNSw4PpToST1V3OSXwiMNw_0[70].name = "tactical";
-TM_QNSw4PpToST1V3OSXwiMNw_0[63].len = 7; TM_QNSw4PpToST1V3OSXwiMNw_0[63].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[63].sons = &TM_QNSw4PpToST1V3OSXwiMNw_20[0];
-NTI_ROIq9bhCLaVdyWYbjv0VWAA_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[63];
+TM_QNSw4PpToST1V3OSXwiMNw_0[68].offset = offsetof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA, tactical);
+TM_QNSw4PpToST1V3OSXwiMNw_0[68].typ = (&NTI_l6gzlXC9az4Slw0mFMjpOXQ_);
+TM_QNSw4PpToST1V3OSXwiMNw_0[68].name = "tactical";
+TM_QNSw4PpToST1V3OSXwiMNw_0[61].len = 7; TM_QNSw4PpToST1V3OSXwiMNw_0[61].kind = 2; TM_QNSw4PpToST1V3OSXwiMNw_0[61].sons = &TM_QNSw4PpToST1V3OSXwiMNw_20[0];
+NTI_ROIq9bhCLaVdyWYbjv0VWAA_.node = &TM_QNSw4PpToST1V3OSXwiMNw_0[61];
 NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_.size = sizeof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA*);
 NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_.kind = 22;
 NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_.base = (&NTI_ROIq9bhCLaVdyWYbjv0VWAA_);

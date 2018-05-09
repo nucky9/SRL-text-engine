@@ -52,8 +52,8 @@ typedef struct tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9c
 typedef struct tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w;
 typedef struct tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ;
 typedef struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ;
-typedef struct tySequence_GAlN8CVr46NYIZ4im9c9baNw tySequence_GAlN8CVr46NYIZ4im9c9baNw;
-typedef struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg tyTuple_hIfxrk3SgJbH9bl3niLBXLg;
+typedef struct tySequence_289bJSnZUYmUtCD0DXkXE0Q tySequence_289bJSnZUYmUtCD0DXkXE0Q;
+typedef struct tyTuple_q1AkG9aybyHixUsHszEiIGw tyTuple_q1AkG9aybyHixUsHszEiIGw;
 typedef NU8 tyEnum_TNimKind_jIBKr1ejBgsfM33Kxw4j7A;
 typedef NU8 tySet_tyEnum_TNimTypeFlag_v8QUszD1sWlSIWZz7mC4bQ;
 typedef N_NIMCALL_PTR(void, tyProc_ojoeKfW4VYIm36I9cpDTQIg) (void* p, NI op);
@@ -220,20 +220,23 @@ tyObject_PageDesc_fublkgIY4LG3mT51LU2WHg* next;
 NI key;
 tyArray_9a8QARi5WsUggNU9bom7kzTQ bits;
 };
+typedef NU8 tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ;
 typedef NU8 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ;
 struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ {
+tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ gender;
 NimStringDesc* firstName;
 NimStringDesc* lastName;
 NI experience;
 NI level;
 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ personalityType;
+tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
 typedef NU8 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA;
 struct tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
 NI captainAbility;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
-tySequence_GAlN8CVr46NYIZ4im9c9baNw* secondaryAbilities;
+tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
 struct tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
@@ -258,7 +261,7 @@ tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 struct tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
 NI maneuvering;
-NI courseSettings;
+NI coursePlotting;
 NI sublightSpeedModifier;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 };
@@ -279,14 +282,13 @@ struct tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ {
 tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ* next;
 NI zeroField;
 };
-typedef NU8 tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w;
-struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg {
-tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w Field0;
+struct tyTuple_q1AkG9aybyHixUsHszEiIGw {
+tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ Field0;
 NI Field1;
 };
-struct tySequence_GAlN8CVr46NYIZ4im9c9baNw {
+struct tySequence_289bJSnZUYmUtCD0DXkXE0Q {
   TGenericSeq Sup;
-  tyTuple_hIfxrk3SgJbH9bl3niLBXLg data[SEQ_DECL_SIZE];
+  tyTuple_q1AkG9aybyHixUsHszEiIGw data[SEQ_DECL_SIZE];
 };
 N_LIB_PRIVATE N_NIMCALL(void, randomize_RtUZt2O8eA6Y5pFWOsdgjg)(void);
 N_NIMCALL(void, nimGCvisit)(void* d, NI op);
@@ -322,6 +324,16 @@ NIM_EXTERNC N_NOINLINE(void, stdlib_timesInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, stdlib_timesDatInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, stdlib_randomInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, stdlib_randomDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_ospathsInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_ospathsDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_osInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_osDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_streamsInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_streamsDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_lexbaseInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_lexbaseDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_parsecsvInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_parsecsvDatInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, unknown_crewtypesInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, unknown_crewtypesDatInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, unknown_captainInit000)(void);
@@ -451,6 +463,11 @@ void PreMainInner(void) {
 	stdlib_winleanDatInit000();
 	stdlib_timesDatInit000();
 	stdlib_randomDatInit000();
+	stdlib_ospathsDatInit000();
+	stdlib_osDatInit000();
+	stdlib_streamsDatInit000();
+	stdlib_lexbaseDatInit000();
+	stdlib_parsecsvDatInit000();
 	unknown_crewtypesDatInit000();
 	unknown_captainDatInit000();
 	unknown_communicationsDatInit000();
@@ -469,6 +486,11 @@ void PreMainInner(void) {
 	stdlib_winleanInit000();
 	stdlib_timesInit000();
 	stdlib_randomInit000();
+	stdlib_ospathsInit000();
+	stdlib_osInit000();
+	stdlib_streamsInit000();
+	stdlib_lexbaseInit000();
+	stdlib_parsecsvInit000();
 	unknown_crewtypesInit000();
 	unknown_captainInit000();
 	unknown_communicationsInit000();

@@ -71,6 +71,12 @@ struct tyObject_FILETIME_bs4NMleDDVF7xsEK0SGLBw {
 NI32 dwLowDateTime;
 NI32 dwHighDateTime;
 };
+typedef N_STDCALL_PTR(NI32, tyProc_9bXer9a4ps9aSGctILcxWReVw) (void);
+typedef N_STDCALL_PTR(NI32, tyProc_aO673xGTLLxou7P7GxoCXA) (NI32 dwFlags, void* lpSource, NI32 dwMessageId, NI32 dwLanguageId, void* lpBuffer, NI32 nSize, void* Arguments);
+typedef N_STDCALL_PTR(void, tyProc_im9buRnIvptJfzdASYMEbBA) (void* p);
+typedef N_STDCALL_PTR(NI16*, tyProc_9cu0cWy2jNXKVhds9cs4T9a9cA) (void);
+typedef N_STDCALL_PTR(NI32, tyProc_hayl9b1HhJokJ1Zo9ctoglPg) (NI16* para1);
+typedef N_STDCALL_PTR(NI32, tyProc_IwsYs9blTXXmAlfsBWq604w) (NI16* lpName, NI16* lpValue);
 N_NOINLINE(void, chckNil)(void* p);
 N_NIMCALL(void, genericReset)(void* dest, TNimType* mt);
 N_LIB_PRIVATE N_NIMCALL(void*, loadLib_EFK1MHQsQvQPg5NaJH389bA)(NimStringDesc* path, NIM_BOOL global_symbols);
@@ -94,6 +100,12 @@ void* ws2_hGspZUrVrEMpO9aP9c3dJQPQ;
 static void* TM_k6kyf4Co79a84IkK9blFuQVA_6;
 tyProc_9bc9cLDdaqTE6n5J78feKRYg Dl_134625_;
 extern TFrame* framePtr_HRfVMH3jYeBJz6Q6X9b6Ptw;
+tyProc_9bXer9a4ps9aSGctILcxWReVw Dl_133630_;
+tyProc_aO673xGTLLxou7P7GxoCXA Dl_133635_;
+tyProc_im9buRnIvptJfzdASYMEbBA Dl_133801_;
+tyProc_9cu0cWy2jNXKVhds9cs4T9a9cA Dl_134432_;
+tyProc_hayl9b1HhJokJ1Zo9ctoglPg Dl_134434_;
+tyProc_IwsYs9blTXXmAlfsBWq604w Dl_133818_;
 NIM_CONST tyArray_9cWG514ToTTjfTPLhXXV0IQ TM_k6kyf4Co79a84IkK9blFuQVA_3 = {((NI8) -114),
 ((NI8) -23),
 ((NI8) 118),
@@ -230,5 +242,11 @@ NTI_J2WQBMgezjwf6Trblkflgg_.node = &TM_k6kyf4Co79a84IkK9blFuQVA_0[0];
 if (!((TM_k6kyf4Co79a84IkK9blFuQVA_6 = nimLoadLibrary((NimStringDesc*) &TM_k6kyf4Co79a84IkK9blFuQVA_8))
 )) nimLoadLibraryError((NimStringDesc*) &TM_k6kyf4Co79a84IkK9blFuQVA_9);
 	Dl_134625_ = (tyProc_9bc9cLDdaqTE6n5J78feKRYg) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "GetSystemTimeAsFileTime");
+	Dl_133630_ = (tyProc_9bXer9a4ps9aSGctILcxWReVw) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "GetLastError");
+	Dl_133635_ = (tyProc_aO673xGTLLxou7P7GxoCXA) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "FormatMessageW");
+	Dl_133801_ = (tyProc_im9buRnIvptJfzdASYMEbBA) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "LocalFree");
+	Dl_134432_ = (tyProc_9cu0cWy2jNXKVhds9cs4T9a9cA) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "GetEnvironmentStringsW");
+	Dl_134434_ = (tyProc_hayl9b1HhJokJ1Zo9ctoglPg) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "FreeEnvironmentStringsW");
+	Dl_133818_ = (tyProc_IwsYs9blTXXmAlfsBWq604w) nimGetProcAddr(TM_k6kyf4Co79a84IkK9blFuQVA_6, "SetEnvironmentVariableW");
 }
 

@@ -192,6 +192,8 @@ tyObject_CellSet_jG87P0AI9aZtss9ccTYBIISQ marked;
 tyObject_CellSeq_Axo1XVm9aaQueTOldv8le5w additionalRoots;
 NI gcThreadId;
 };
+typedef NU8 tySet_tyChar_nmiMWKVIe46vacnhAFrQvw[32];
+typedef NI tyArray_9cc9aPiDa8VaWjVcFLabEDZQ[256];
 struct tyObject_StackTraceEntry_oLyohQ7O2XOvGnflOss8EA {
 NCSTRING procname;
 NI line;
@@ -278,11 +280,23 @@ static N_INLINE(void, incRef_9cAA5YuQAAC3MVbnGeV86swsystem)(tyObject_Cell_1zcF9c
 static N_INLINE(void, decRef_MV4BBk6J1qu70IbBxwEn4wsystem)(tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g* c);
 N_NIMCALL(void, raiseException)(Exception* e, NCSTRING ename);
 N_LIB_PRIVATE N_NIMCALL(NIM_CHAR, nsuToLowerAsciiChar)(NIM_CHAR c);
+N_LIB_PRIVATE N_NIMCALL(NI, nsuFindCharSet)(NimStringDesc* s, tySet_tyChar_nmiMWKVIe46vacnhAFrQvw chars, NI start, NI last);
+N_LIB_PRIVATE N_NIMCALL(void, failedAssertImpl_aDmpBTs9cPuXp0Mp9cfiNeyA)(NimStringDesc* msg);
+N_NIMCALL(NimStringDesc*, copyString)(NimStringDesc* src);
+N_LIB_PRIVATE N_NIMCALL(void, nsuInitSkipTable)(NI* a, NimStringDesc* sub);
+N_LIB_PRIVATE N_NIMCALL(NI, nsuFindStrA)(tyArray_9cc9aPiDa8VaWjVcFLabEDZQ a, NimStringDesc* s, NimStringDesc* sub, NI start, NI last);
+N_NIMCALL(NimStringDesc*, copyStrLast)(NimStringDesc* s, NI start, NI last);
+N_NIMCALL(NimStringDesc*, copyStrLast)(NimStringDesc* s, NI first, NI last);
+N_NIMCALL(NimStringDesc*, resizeString)(NimStringDesc* dest, NI addlen);
+N_NIMCALL(NimStringDesc*, copyStr)(NimStringDesc* s, NI start);
+N_NIMCALL(NimStringDesc*, copyStr)(NimStringDesc* s, NI first);
 extern TFrame* framePtr_HRfVMH3jYeBJz6Q6X9b6Ptw;
 extern TNimType NTI_yCEN9anxCD6mzBxGjuaRBdg_;
 extern TNimType NTI_Gi06FkNeykJn7mrqRZYrkA_;
 extern tyObject_GcHeap_1TRH1TZMaVZTnLNcIHuNFQ gch_IcYaEuuWivYAS86vFMTS3Q;
 STRING_LITERAL(TM_JGc9b9bh2D3nTdUR7TGyq8aA_13, "invalid integer: ", 17);
+STRING_LITERAL(TM_JGc9b9bh2D3nTdUR7TGyq8aA_20, "len(a) == L string modified while iterating over it", 51);
+STRING_LITERAL(TM_JGc9b9bh2D3nTdUR7TGyq8aA_21, "", 0);
 
 static N_INLINE(NI, subInt)(NI a, NI b) {
 	NI result;
@@ -912,6 +926,269 @@ N_LIB_PRIVATE N_NIMCALL(NI, nsuCmpIgnoreCase)(NimStringDesc* a, NimStringDesc* b
 	TM_JGc9b9bh2D3nTdUR7TGyq8aA_19 = subInt((a ? a->Sup.len : 0), (b ? b->Sup.len : 0));
 	result = (NI)(TM_JGc9b9bh2D3nTdUR7TGyq8aA_19);
 	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, nsuStartsWith)(NimStringDesc* s, NimStringDesc* prefix) {
+	NIM_BOOL result;
+	NI i;
+	nimfr_("startsWith", "strutils.nim");
+{	result = (NIM_BOOL)0;
+	i = ((NI) 0);
+	{
+		while (1) {
+			{
+				if (!((NU8)(prefix->data[i]) == (NU8)(0))) goto LA5_;
+				result = NIM_TRUE;
+				goto BeforeRet_;
+			}
+			LA5_: ;
+			{
+				if (!!(((NU8)(s->data[i]) == (NU8)(prefix->data[i])))) goto LA9_;
+				result = NIM_FALSE;
+				goto BeforeRet_;
+			}
+			LA9_: ;
+			i += ((NI) 1);
+		}
+	}
+	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NI, nsuFindCharSet)(NimStringDesc* s, tySet_tyChar_nmiMWKVIe46vacnhAFrQvw chars, NI start, NI last) {
+	NI result;
+	NI last_2;
+	nimfr_("find", "strutils.nim");
+{	result = (NI)0;
+	{
+		if (!(((NI) (last)) == ((NI) 0))) goto LA3_;
+		last_2 = (s ? (s->Sup.len-1) : -1);
+	}
+	goto LA1_;
+	LA3_: ;
+	{
+		last_2 = ((NI) (last));
+	}
+	LA1_: ;
+	{
+		NI i;
+		NI colontmp_;
+		NI res;
+		i = (NI)0;
+		colontmp_ = (NI)0;
+		colontmp_ = ((NI) (last_2));
+		res = ((NI) (start));
+		{
+			while (1) {
+				if (!(res <= ((NI) (colontmp_)))) goto LA8;
+				i = ((NI) (res));
+				{
+					if (!((chars[(NU)(((NU8)(s->data[i])))>>3] &(1U<<((NU)(((NU8)(s->data[i])))&7U)))!=0)) goto LA11_;
+					result = ((NI) (i));
+					goto BeforeRet_;
+				}
+				LA11_: ;
+				res += ((NI) 1);
+			} LA8: ;
+		}
+	}
+	result = ((NI) -1);
+	goto BeforeRet_;
+	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, contains_m1TSS3QwQPclQATuiRuVZg)(NimStringDesc* s, tySet_tyChar_nmiMWKVIe46vacnhAFrQvw chars) {
+	NIM_BOOL result;
+	NI T1_;
+	nimfr_("contains", "strutils.nim");
+{	result = (NIM_BOOL)0;
+	T1_ = (NI)0;
+	T1_ = nsuFindCharSet(s, chars, ((NI) 0), ((NI) 0));
+	result = (((NI) 0) <= T1_);
+	goto BeforeRet_;
+	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NIM_BOOL, allCharsInSet_wVfr4F6j4mVzI8ggLoMVdw)(NimStringDesc* s, tySet_tyChar_nmiMWKVIe46vacnhAFrQvw theSet) {
+	NIM_BOOL result;
+	nimfr_("allCharsInSet", "strutils.nim");
+{	result = (NIM_BOOL)0;
+	{
+		NIM_CHAR c;
+		NI i;
+		NI L;
+		c = (NIM_CHAR)0;
+		i = ((NI) 0);
+		L = (s ? s->Sup.len : 0);
+		{
+			while (1) {
+				if (!(i < L)) goto LA3;
+				c = s->data[i];
+				{
+					if (!!(((theSet[(NU)(((NU8)(c)))>>3] &(1U<<((NU)(((NU8)(c)))&7U)))!=0))) goto LA6_;
+					result = NIM_FALSE;
+					goto BeforeRet_;
+				}
+				LA6_: ;
+				i += ((NI) 1);
+				{
+					if (!!(((s ? s->Sup.len : 0) == L))) goto LA10_;
+					failedAssertImpl_aDmpBTs9cPuXp0Mp9cfiNeyA(((NimStringDesc*) &TM_JGc9b9bh2D3nTdUR7TGyq8aA_20));
+				}
+				LA10_: ;
+			} LA3: ;
+		}
+	}
+	result = NIM_TRUE;
+	goto BeforeRet_;
+	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(void, nsuInitSkipTable)(NI* a, NimStringDesc* sub) {
+	NI m;
+	NI m1;
+	NI i;
+	nimfr_("initSkipTable", "strutils.nim");
+	m = (sub ? sub->Sup.len : 0);
+	m1 = (NI)(m + ((NI) 1));
+	i = ((NI) 0);
+	{
+		while (1) {
+			if (!(i <= ((NI) 248))) goto LA2;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 0)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 1)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 2)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 3)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 4)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 5)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 6)))))))))- 0] = m1;
+			a[(((NU8)(((NIM_CHAR) (((NI) ((NI)(i + ((NI) 7)))))))))- 0] = m1;
+			i += ((NI) 8);
+		} LA2: ;
+	}
+	{
+		NI i_2;
+		NI colontmp_;
+		NI res;
+		i_2 = (NI)0;
+		colontmp_ = (NI)0;
+		colontmp_ = (NI)(m - ((NI) 1));
+		res = ((NI) 0);
+		{
+			while (1) {
+				if (!(res <= colontmp_)) goto LA5;
+				i_2 = res;
+				a[(((NU8)(sub->data[i_2])))- 0] = (NI)(m - i_2);
+				res += ((NI) 1);
+			} LA5: ;
+		}
+	}
+	popFrame();
+}
+
+N_LIB_PRIVATE N_NIMCALL(NI, nsuFindStrA)(tyArray_9cc9aPiDa8VaWjVcFLabEDZQ a, NimStringDesc* s, NimStringDesc* sub, NI start, NI last) {
+	NI result;
+	NI last_2;
+	NI m;
+	NI n;
+	NI j;
+	nimfr_("find", "strutils.nim");
+{	result = (NI)0;
+	{
+		if (!(((NI) (last)) == ((NI) 0))) goto LA3_;
+		last_2 = (s ? (s->Sup.len-1) : -1);
+	}
+	goto LA1_;
+	LA3_: ;
+	{
+		last_2 = ((NI) (last));
+	}
+	LA1_: ;
+	m = (sub ? sub->Sup.len : 0);
+	n = (NI)(last_2 + ((NI) 1));
+	j = start;
+	{
+		while (1) {
+			if (!(((NI) (j)) <= (NI)(n - m))) goto LA7;
+			{
+				{
+					NI k;
+					NI colontmp_;
+					NI res;
+					k = (NI)0;
+					colontmp_ = (NI)0;
+					colontmp_ = (NI)(m - ((NI) 1));
+					res = ((NI) 0);
+					{
+						while (1) {
+							if (!(res <= colontmp_)) goto LA11;
+							k = res;
+							{
+								if (!!(((NU8)(sub->data[k]) == (NU8)(s->data[(NI)(k + ((NI) (j)))])))) goto LA14_;
+								goto LA8;
+							}
+							LA14_: ;
+							res += ((NI) 1);
+						} LA11: ;
+					}
+				}
+				result = ((NI) (j));
+				goto BeforeRet_;
+			} LA8: ;
+			j += a[(((NU8)(s->data[(NI)(((NI) (j)) + m)])))- 0];
+		} LA7: ;
+	}
+	result = ((NI) -1);
+	goto BeforeRet_;
+	}BeforeRet_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, nsuReplaceStr)(NimStringDesc* s, NimStringDesc* sub, NimStringDesc* by) {
+	NimStringDesc* result;
+	tyArray_9cc9aPiDa8VaWjVcFLabEDZQ a;
+	NI last;
+	NI i;
+	NimStringDesc* T8_;
+	nimfr_("replace", "strutils.nim");
+	result = (NimStringDesc*)0;
+	result = copyString(((NimStringDesc*) &TM_JGc9b9bh2D3nTdUR7TGyq8aA_21));
+	nsuInitSkipTable(a, sub);
+	last = (s ? (s->Sup.len-1) : -1);
+	i = ((NI) 0);
+	{
+		while (1) {
+			NI j;
+			NimStringDesc* T7_;
+			j = nsuFindStrA(a, s, sub, ((NI) (i)), ((NI) (last)));
+			{
+				if (!(j < ((NI) 0))) goto LA5_;
+				goto LA1;
+			}
+			LA5_: ;
+			T7_ = (NimStringDesc*)0;
+			T7_ = copyStrLast(s, i, (NI)(j - ((NI) 1)));
+			result = resizeString(result, T7_->Sup.len + 0);
+appendString(result, T7_);
+			result = resizeString(result, by->Sup.len + 0);
+appendString(result, by);
+			i = (NI)(j + (sub ? sub->Sup.len : 0));
+		}
+	} LA1: ;
+	T8_ = (NimStringDesc*)0;
+	T8_ = copyStr(s, i);
+	result = resizeString(result, T8_->Sup.len + 0);
+appendString(result, T8_);
 	popFrame();
 	return result;
 }
