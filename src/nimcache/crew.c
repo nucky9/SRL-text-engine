@@ -378,7 +378,7 @@ static N_INLINE(void, close_A55CxARYHkQe359a6AS5GRQparsecsv)(tyObject_CsvParser_
 N_LIB_PRIVATE N_NIMCALL(void, close_QbedUCk2XwI9c7bbRzXBY0g)(tyObject_BaseLexer_B6cGbTPhMsqMovc9cOcIHRw* L);
 static N_INLINE(NI, subInt)(NI a, NI b);
 N_NOINLINE(void, raiseIndexError)(void);
-N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateLastName_hmifkXHmi3cNB1EPx0g8Eg)(void);
+N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateLastName_FPn0yk4zvl0rx57OZ0gi0g)(void);
 N_LIB_PRIVATE N_NIMCALL(tySequence_289bJSnZUYmUtCD0DXkXE0Q*, generatePersonalityModifiers_QlsnkGx4LMXiEdo4PehKLQ)(void);
 N_NIMCALL(void*, newSeq)(TNimType* typ, NI len);
 static N_INLINE(NI, chckRange)(NI i, NI a, NI b);
@@ -414,17 +414,17 @@ extern TNimType NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_;
 extern tyObject_GcHeap_1TRH1TZMaVZTnLNcIHuNFQ gch_IcYaEuuWivYAS86vFMTS3Q;
 STRING_LITERAL(TM_4pYDEDthCHvudLEYQPfAaw_2, "../assets/names/maleNames.csv", 29);
 STRING_LITERAL(TM_4pYDEDthCHvudLEYQPfAaw_3, "../assets/names/femaleNames.csv", 31);
-STRING_LITERAL(TM_4pYDEDthCHvudLEYQPfAaw_7, "Kirk", 4);
+STRING_LITERAL(TM_4pYDEDthCHvudLEYQPfAaw_7, "../assets/names/lastNames.csv", 29);
 extern NIM_CONST tyArray_8rChXCw9c59cXiB7dCp4nPNQ personalityModifiers_B3JvhT5FCLTSElf9csJ1X9cg;
 NIM_CONST struct {
   TGenericSeq Sup;
   tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ data[5];
-} TM_4pYDEDthCHvudLEYQPfAaw_11 = {{5, 5}, {((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 0),
+} TM_4pYDEDthCHvudLEYQPfAaw_14 = {{5, 5}, {((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 0),
 ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 1),
 ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 2),
 ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 3),
 ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 4)}};
-NIM_CONST tySequence_Jtxj8YnZO9cu8mqaUBb1RtA* TM_4pYDEDthCHvudLEYQPfAaw_10 = ((tySequence_Jtxj8YnZO9cu8mqaUBb1RtA*)&TM_4pYDEDthCHvudLEYQPfAaw_11);
+NIM_CONST tySequence_Jtxj8YnZO9cu8mqaUBb1RtA* TM_4pYDEDthCHvudLEYQPfAaw_13 = ((tySequence_Jtxj8YnZO9cu8mqaUBb1RtA*)&TM_4pYDEDthCHvudLEYQPfAaw_14);
 
 static N_INLINE(void, nimFrame)(TFrame* s) {
 	NI T1_;
@@ -471,20 +471,20 @@ N_LIB_PRIVATE N_NIMCALL(tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ, generateGender_4Bi
 	tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA T1_;
 	nimfr_("generateGender", "crew.nim");
 {	result = (tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ)0;
-	nimln_(21, "crew.nim");
+	nimln_(22, "crew.nim");
 	T1_ = dotdot__vDQySKWzgnxQdUarow6k5Qtimes(((NI) 0), ((NI) 1));
 	randomRoll = rand_an9ajRjsC0saLyxF46lqhIw(T1_);
-	nimln_(22, "crew.nim");
+	nimln_(23, "crew.nim");
 	{
 		if (!(randomRoll == ((NI) 0))) goto LA4_;
-		nimln_(23, "crew.nim");
+		nimln_(24, "crew.nim");
 		result = ((tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ) 1);
 		goto BeforeRet_;
 	}
 	goto LA2_;
 	LA4_: ;
 	{
-		nimln_(25, "crew.nim");
+		nimln_(26, "crew.nim");
 		result = ((tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ) 0);
 		goto BeforeRet_;
 	}
@@ -558,7 +558,7 @@ N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateFirstName_3PXeXLYw2GZeUvt7qwcXnw
 	memset((void*)(&p), 0, sizeof(p));
 	p.Sup.Sup.m_type = (&NTI_e0KmhL4ItditGQKnCUZMoQ_);
 	nameFile = (NimStringDesc*)0;
-	nimln_(32, "crew.nim");
+	nimln_(33, "crew.nim");
 	{
 		if (!(gender == ((tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ) 0))) goto LA3_;
 		nimln_(16, "crew.nim");
@@ -571,44 +571,44 @@ N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateFirstName_3PXeXLYw2GZeUvt7qwcXnw
 		nameFile = copyString(((NimStringDesc*) &TM_4pYDEDthCHvudLEYQPfAaw_3));
 	}
 	LA1_: ;
-	nimln_(37, "crew.nim");
-	open_grmoJIpX15R5Xfx6m2M1UA((&p), nameFile, 44, 34, 0, NIM_FALSE);
 	nimln_(38, "crew.nim");
+	open_grmoJIpX15R5Xfx6m2M1UA((&p), nameFile, 44, 34, 0, NIM_FALSE);
+	nimln_(39, "crew.nim");
 	numRows = ((NI) 0);
 	{
-		nimln_(39, "crew.nim");
+		nimln_(40, "crew.nim");
 		while (1) {
 			NIM_BOOL T8_;
 			NI TM_4pYDEDthCHvudLEYQPfAaw_4;
 			T8_ = (NIM_BOOL)0;
 			T8_ = readRow_9bHdhFE0qEvOrDqjuQBz8Pw((&p), ((NI) 0));
 			if (!T8_) goto LA7;
-			nimln_(40, "crew.nim");
+			nimln_(41, "crew.nim");
 			TM_4pYDEDthCHvudLEYQPfAaw_4 = addInt(numRows, ((NI) 1));
 			numRows = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_4);
 		} LA7: ;
 	}
-	nimln_(41, "crew.nim");
-	close_A55CxARYHkQe359a6AS5GRQparsecsv((&p));
 	nimln_(42, "crew.nim");
-	open_grmoJIpX15R5Xfx6m2M1UA((&p), nameFile, 44, 34, 0, NIM_FALSE);
+	close_A55CxARYHkQe359a6AS5GRQparsecsv((&p));
 	nimln_(43, "crew.nim");
+	open_grmoJIpX15R5Xfx6m2M1UA((&p), nameFile, 44, 34, 0, NIM_FALSE);
+	nimln_(44, "crew.nim");
 	TM_4pYDEDthCHvudLEYQPfAaw_5 = subInt(numRows, ((NI) 1));
 	T9_ = dotdot__vDQySKWzgnxQdUarow6k5Qtimes(((NI) 0), (NI)(TM_4pYDEDthCHvudLEYQPfAaw_5));
 	randomRow = rand_an9ajRjsC0saLyxF46lqhIw(T9_);
-	nimln_(44, "crew.nim");
+	nimln_(45, "crew.nim");
 	i = ((NI) 0);
 	{
-		nimln_(45, "crew.nim");
+		nimln_(46, "crew.nim");
 		while (1) {
 			NIM_BOOL T12_;
 			T12_ = (NIM_BOOL)0;
 			T12_ = readRow_9bHdhFE0qEvOrDqjuQBz8Pw((&p), ((NI) 0));
 			if (!T12_) goto LA11;
-			nimln_(46, "crew.nim");
+			nimln_(47, "crew.nim");
 			{
 				if (!(i == randomRow)) goto LA15_;
-				nimln_(47, "crew.nim");
+				nimln_(48, "crew.nim");
 				if ((NU)(((NI) 0)) >= (NU)(p.row->Sup.len)) raiseIndexError();
 				result = copyString(p.row->data[((NI) 0)]);
 				goto BeforeRet_;
@@ -617,26 +617,88 @@ N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateFirstName_3PXeXLYw2GZeUvt7qwcXnw
 			LA15_: ;
 			{
 				NI TM_4pYDEDthCHvudLEYQPfAaw_6;
-				nimln_(49, "crew.nim");
+				nimln_(50, "crew.nim");
 				TM_4pYDEDthCHvudLEYQPfAaw_6 = addInt(i, ((NI) 1));
 				i = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_6);
 			}
 			LA13_: ;
 		} LA11: ;
 	}
-	nimln_(51, "crew.nim");
+	nimln_(52, "crew.nim");
 	close_A55CxARYHkQe359a6AS5GRQparsecsv((&p));
 	}BeforeRet_: ;
 	popFrame();
 	return result;
 }
 
-N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateLastName_hmifkXHmi3cNB1EPx0g8Eg)(void) {
+N_LIB_PRIVATE N_NIMCALL(NimStringDesc*, generateLastName_FPn0yk4zvl0rx57OZ0gi0g)(void) {
 	NimStringDesc* result;
+	tyObject_CsvParser_e0KmhL4ItditGQKnCUZMoQ p;
+	NI numRows;
+	NI randomRow;
+	NI TM_4pYDEDthCHvudLEYQPfAaw_9;
+	tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA T4_;
+	NI i;
 	nimfr_("generateLastName", "crew.nim");
-	result = (NimStringDesc*)0;
-	nimln_(55, "crew.nim");
-	result = copyString(((NimStringDesc*) &TM_4pYDEDthCHvudLEYQPfAaw_7));
+{	result = (NimStringDesc*)0;
+	memset((void*)(&p), 0, sizeof(p));
+	p.Sup.Sup.m_type = (&NTI_e0KmhL4ItditGQKnCUZMoQ_);
+	nimln_(59, "crew.nim");
+	open_grmoJIpX15R5Xfx6m2M1UA((&p), ((NimStringDesc*) &TM_4pYDEDthCHvudLEYQPfAaw_7), 44, 34, 0, NIM_FALSE);
+	nimln_(60, "crew.nim");
+	numRows = ((NI) 0);
+	{
+		nimln_(61, "crew.nim");
+		while (1) {
+			NIM_BOOL T3_;
+			NI TM_4pYDEDthCHvudLEYQPfAaw_8;
+			T3_ = (NIM_BOOL)0;
+			T3_ = readRow_9bHdhFE0qEvOrDqjuQBz8Pw((&p), ((NI) 0));
+			if (!T3_) goto LA2;
+			nimln_(62, "crew.nim");
+			TM_4pYDEDthCHvudLEYQPfAaw_8 = addInt(numRows, ((NI) 1));
+			numRows = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_8);
+		} LA2: ;
+	}
+	nimln_(63, "crew.nim");
+	close_A55CxARYHkQe359a6AS5GRQparsecsv((&p));
+	nimln_(64, "crew.nim");
+	open_grmoJIpX15R5Xfx6m2M1UA((&p), ((NimStringDesc*) &TM_4pYDEDthCHvudLEYQPfAaw_7), 44, 34, 0, NIM_FALSE);
+	nimln_(65, "crew.nim");
+	TM_4pYDEDthCHvudLEYQPfAaw_9 = subInt(numRows, ((NI) 1));
+	T4_ = dotdot__vDQySKWzgnxQdUarow6k5Qtimes(((NI) 0), (NI)(TM_4pYDEDthCHvudLEYQPfAaw_9));
+	randomRow = rand_an9ajRjsC0saLyxF46lqhIw(T4_);
+	nimln_(66, "crew.nim");
+	i = ((NI) 0);
+	{
+		nimln_(67, "crew.nim");
+		while (1) {
+			NIM_BOOL T7_;
+			T7_ = (NIM_BOOL)0;
+			T7_ = readRow_9bHdhFE0qEvOrDqjuQBz8Pw((&p), ((NI) 0));
+			if (!T7_) goto LA6;
+			nimln_(68, "crew.nim");
+			{
+				if (!(i == randomRow)) goto LA10_;
+				nimln_(69, "crew.nim");
+				if ((NU)(((NI) 0)) >= (NU)(p.row->Sup.len)) raiseIndexError();
+				result = copyString(p.row->data[((NI) 0)]);
+				goto BeforeRet_;
+			}
+			goto LA8_;
+			LA10_: ;
+			{
+				NI TM_4pYDEDthCHvudLEYQPfAaw_10;
+				nimln_(71, "crew.nim");
+				TM_4pYDEDthCHvudLEYQPfAaw_10 = addInt(i, ((NI) 1));
+				i = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_10);
+			}
+			LA8_: ;
+		} LA6: ;
+	}
+	nimln_(73, "crew.nim");
+	close_A55CxARYHkQe359a6AS5GRQparsecsv((&p));
+	}BeforeRet_: ;
 	popFrame();
 	return result;
 }
@@ -669,7 +731,7 @@ N_LIB_PRIVATE N_NIMCALL(tySequence_289bJSnZUYmUtCD0DXkXE0Q*, generatePersonality
 	tySequence_289bJSnZUYmUtCD0DXkXE0Q* result;
 	nimfr_("generatePersonalityModifiers", "crew.nim");
 	result = (tySequence_289bJSnZUYmUtCD0DXkXE0Q*)0;
-	nimln_(59, "crew.nim");
+	nimln_(77, "crew.nim");
 	result = (tySequence_289bJSnZUYmUtCD0DXkXE0Q*) newSeq((&NTI_289bJSnZUYmUtCD0DXkXE0Q_), 0);
 	{
 		tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ personality;
@@ -685,8 +747,10 @@ N_LIB_PRIVATE N_NIMCALL(tySequence_289bJSnZUYmUtCD0DXkXE0Q*, generatePersonality
 				while (1) {
 					NI modifier;
 					tyTuple_q1AkG9aybyHixUsHszEiIGw newPersonalityModifier;
+					NI randomRoll;
+					tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA T5_;
 					NI T21_;
-					NI TM_4pYDEDthCHvudLEYQPfAaw_9;
+					NI TM_4pYDEDthCHvudLEYQPfAaw_12;
 					if (!(res <= ((NI) 4))) goto LA4;
 					nimln_(2047, "system.nim");
 					v = ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ)chckRange(res, ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 0), ((tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ) 4)));
@@ -694,6 +758,9 @@ N_LIB_PRIVATE N_NIMCALL(tySequence_289bJSnZUYmUtCD0DXkXE0Q*, generatePersonality
 					personality = v;
 					modifier = (NI)0;
 					memset((void*)(&newPersonalityModifier), 0, sizeof(newPersonalityModifier));
+					nimln_(83, "crew.nim");
+					T5_ = dotdot__vDQySKWzgnxQdUarow6k5Qtimes(((NI) 0), ((NI) 100));
+					randomRoll = rand_an9ajRjsC0saLyxF46lqhIw(T5_);
 					{
 						tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ entry;
 						NI i;
@@ -702,53 +769,48 @@ N_LIB_PRIVATE N_NIMCALL(tySequence_289bJSnZUYmUtCD0DXkXE0Q*, generatePersonality
 						i = ((NI) 0);
 						nimln_(2200, "system.nim");
 						{
-							if (!(((NI) (i)) <= ((NI) 6))) goto LA8_;
+							if (!(((NI) (i)) <= ((NI) 6))) goto LA9_;
 							{
 								nimln_(2201, "system.nim");
 								while (1) {
-									NI randomRoll;
-									tyObject_HSlice_x7qpDivRIi6zcMSMsudNPA T12_;
-									NI TM_4pYDEDthCHvudLEYQPfAaw_8;
+									NI TM_4pYDEDthCHvudLEYQPfAaw_11;
 									nimln_(2202, "system.nim");
 									entry = personalityModifiers_B3JvhT5FCLTSElf9csJ1X9cg[(i)- 0];
-									nimln_(66, "crew.nim");
-									T12_ = dotdot__vDQySKWzgnxQdUarow6k5Qtimes(((NI) 0), ((NI) 100));
-									randomRoll = rand_an9ajRjsC0saLyxF46lqhIw(T12_);
-									nimln_(67, "crew.nim");
+									nimln_(85, "crew.nim");
 									{
 										if (!(randomRoll <= entry.Field0)) goto LA15_;
-										nimln_(68, "crew.nim");
+										nimln_(86, "crew.nim");
 										modifier = entry.Field1;
-										nimln_(69, "crew.nim");
-										goto LA5;
+										nimln_(87, "crew.nim");
+										goto LA6;
 									}
 									LA15_: ;
 									nimln_(2203, "system.nim");
 									{
 										if (!(((NI) 6) <= ((NI) (i)))) goto LA19_;
-										goto LA10;
+										goto LA11;
 									}
 									LA19_: ;
 									nimln_(2204, "system.nim");
-									TM_4pYDEDthCHvudLEYQPfAaw_8 = addInt(i, ((NI) 1));
-									if (TM_4pYDEDthCHvudLEYQPfAaw_8 < 0 || TM_4pYDEDthCHvudLEYQPfAaw_8 > 6) raiseOverflow();
-									i = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_8);
+									TM_4pYDEDthCHvudLEYQPfAaw_11 = addInt(i, ((NI) 1));
+									if (TM_4pYDEDthCHvudLEYQPfAaw_11 < 0 || TM_4pYDEDthCHvudLEYQPfAaw_11 > 6) raiseOverflow();
+									i = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_11);
 								}
-							} LA10: ;
+							} LA11: ;
 						}
-						LA8_: ;
-					} LA5: ;
-					nimln_(70, "crew.nim");
+						LA9_: ;
+					} LA6: ;
+					nimln_(88, "crew.nim");
 					newPersonalityModifier.Field0 = personality;
-					nimln_(71, "crew.nim");
+					nimln_(89, "crew.nim");
 					newPersonalityModifier.Field1 = modifier;
-					nimln_(73, "crew.nim");
+					nimln_(91, "crew.nim");
 					result = (tySequence_289bJSnZUYmUtCD0DXkXE0Q*) incrSeqV2(&(result)->Sup, sizeof(tyTuple_q1AkG9aybyHixUsHszEiIGw));
 					T21_ = result->Sup.len++;
 					result->data[T21_] = newPersonalityModifier;
 					nimln_(2048, "system.nim");
-					TM_4pYDEDthCHvudLEYQPfAaw_9 = addInt(res, ((NI) 1));
-					res = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_9);
+					TM_4pYDEDthCHvudLEYQPfAaw_12 = addInt(res, ((NI) 1));
+					res = (NI)(TM_4pYDEDthCHvudLEYQPfAaw_12);
 				} LA4: ;
 			}
 		}
@@ -762,9 +824,9 @@ N_LIB_PRIVATE N_NIMCALL(tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ, generate
 	tySequence_Jtxj8YnZO9cu8mqaUBb1RtA* personalities;
 	nimfr_("generatePersonalityType", "crew.nim");
 {	result = (tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ)0;
-	nimln_(77, "crew.nim");
-	genericSeqAssign((&personalities), TM_4pYDEDthCHvudLEYQPfAaw_10, (&NTI_Jtxj8YnZO9cu8mqaUBb1RtA_));
-	nimln_(78, "crew.nim");
+	nimln_(95, "crew.nim");
+	genericSeqAssign((&personalities), TM_4pYDEDthCHvudLEYQPfAaw_13, (&NTI_Jtxj8YnZO9cu8mqaUBb1RtA_));
+	nimln_(96, "crew.nim");
 	result = rand_PcJft7w0FmlF27beget4GQ(personalities->data, personalities->Sup.len);
 	goto BeforeRet_;
 	}BeforeRet_: ;
@@ -777,21 +839,21 @@ N_LIB_PRIVATE N_NIMCALL(void, generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ)(tyOb
 	nimfr_("generateBaseCrewInfo", "crew.nim");
 	chckNil((void*)Result);
 	genericReset((void*)Result, (&NTI_XKHobPLd3O3l3A9aqud8UbQ_));
-	nimln_(82, "crew.nim");
+	nimln_(100, "crew.nim");
 	gender = generateGender_4Bi3HSfIeC8ZZf5FIoXIAQ();
-	nimln_(83, "crew.nim");
+	nimln_(101, "crew.nim");
 	chckNil((void*)Result);
 	genericReset((void*)Result, (&NTI_XKHobPLd3O3l3A9aqud8UbQ_));
 	(*Result).gender = gender;
-	nimln_(85, "crew.nim");
+	nimln_(103, "crew.nim");
 	unsureAsgnRef((void**) (&(*Result).firstName), generateFirstName_3PXeXLYw2GZeUvt7qwcXnw(gender));
-	nimln_(86, "crew.nim");
-	unsureAsgnRef((void**) (&(*Result).lastName), generateLastName_hmifkXHmi3cNB1EPx0g8Eg());
+	nimln_(104, "crew.nim");
+	unsureAsgnRef((void**) (&(*Result).lastName), generateLastName_FPn0yk4zvl0rx57OZ0gi0g());
 	(*Result).experience = ((NI) 0);
 	(*Result).level = ((NI) 1);
-	nimln_(89, "crew.nim");
+	nimln_(107, "crew.nim");
 	(*Result).personalityType = generatePersonalityType_XS9c9acPzdfcVeXPR55bhlQA();
-	nimln_(90, "crew.nim");
+	nimln_(108, "crew.nim");
 	unsureAsgnRef((void**) (&(*Result).personalityModifiers), generatePersonalityModifiers_QlsnkGx4LMXiEdo4PehKLQ());
 	popFrame();
 }
@@ -862,34 +924,34 @@ N_LIB_PRIVATE N_NIMCALL(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWA
 	tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ T8_;
 	nimfr_("generateCrew", "crew.nim");
 	result = (tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA*)0;
-	nimln_(95, "crew.nim");
+	nimln_(113, "crew.nim");
 	T1_ = (tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA*)0;
 	T1_ = (tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA*) newObj((&NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_), sizeof(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA));
-	nimln_(96, "crew.nim");
+	nimln_(114, "crew.nim");
 	memset((void*)(&T2_), 0, sizeof(T2_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T2_));
 	asgnRefNoCycle((void**) (&(*T1_).captain), generateCaptain_bJdC9bwcxW0CoAya1uM31FA((&T2_)));
-	nimln_(97, "crew.nim");
+	nimln_(115, "crew.nim");
 	memset((void*)(&T3_), 0, sizeof(T3_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T3_));
 	asgnRefNoCycle((void**) (&(*T1_).communications), generateCommunicationsOfficer_EF9cuDLp9bDwPtK9b1CL9cy83Q((&T3_)));
-	nimln_(98, "crew.nim");
+	nimln_(116, "crew.nim");
 	memset((void*)(&T4_), 0, sizeof(T4_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T4_));
 	asgnRefNoCycle((void**) (&(*T1_).engineer), generateEngineeringOfficer_Z0efkGtOlMCMWrbK6N07Rw((&T4_)));
-	nimln_(99, "crew.nim");
+	nimln_(117, "crew.nim");
 	memset((void*)(&T5_), 0, sizeof(T5_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T5_));
 	asgnRefNoCycle((void**) (&(*T1_).medical), generateMedicalOfficer_YMb9cBYvIZbFRVWU2s55VPw((&T5_)));
-	nimln_(100, "crew.nim");
+	nimln_(118, "crew.nim");
 	memset((void*)(&T6_), 0, sizeof(T6_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T6_));
 	asgnRefNoCycle((void**) (&(*T1_).navigation), generateNavigationOfficer_ksohtDr9a1dAL8lDDhskAvQ((&T6_)));
-	nimln_(101, "crew.nim");
+	nimln_(119, "crew.nim");
 	memset((void*)(&T7_), 0, sizeof(T7_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T7_));
 	asgnRefNoCycle((void**) (&(*T1_).science), generateScienceOfficer_V3UIwQyRth70mCYQh0sqNA((&T7_)));
-	nimln_(102, "crew.nim");
+	nimln_(120, "crew.nim");
 	memset((void*)(&T8_), 0, sizeof(T8_));
 	generateBaseCrewInfo_zJJ9c86cbn1MP33iOs832AQ((&T8_));
 	asgnRefNoCycle((void**) (&(*T1_).tactical), generateTacticalOfficer_mFlBFfOCjuyT9ayBO4ygTBQ((&T8_)));

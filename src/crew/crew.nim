@@ -15,6 +15,7 @@ import
 const
   maleNamesFile = "../assets/names/maleNames.csv"
   femaleNamesFile = "../assets/names/femaleNames.csv"
+  lastNamesFile = "../assets/names/lastNames.csv"
 
 
 proc generateGender(): Gender =
@@ -52,7 +53,24 @@ proc generateFirstName(gender: Gender): string =
 
 
 proc generateLastName(): string =
-  result = "Kirk"
+  var
+    p: CsvParser
+
+  p.open(lastNamesFile)
+  var numRows = 0
+  while p.readRow():
+    inc numRows
+  p.close()
+  p.open(lastNamesFile)
+  let randomRow = rand(0..<numRows)
+  var i = 0
+  while p.readRow():
+    if i == (randomRow):
+      return p.row[0]
+    else:
+      inc i
+
+  p.close()
 
 
 proc generatePersonalityModifiers(): seq[PersonalityModifier] =
@@ -62,8 +80,8 @@ proc generatePersonalityModifiers(): seq[PersonalityModifier] =
       modifier: int
       newPersonalityModifier: PersonalityModifier
     
+    let randomRoll = rand(0..100)
     for entry in personalityModifiers:
-      let randomRoll = rand(0..100)
       if randomRoll <= entry[0]:
         modifier = entry[1]
         break

@@ -1,8 +1,6 @@
 {"compile":[
-["C:\\SpaceRLTextEngine\\src\\nimcache\\main.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\main.o C:\\SpaceRLTextEngine\\src\\nimcache\\main.c"],
-["C:\\SpaceRLTextEngine\\src\\nimcache\\crew.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.c"],
-["C:\\SpaceRLTextEngine\\src\\nimcache\\captain.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\captain.o C:\\SpaceRLTextEngine\\src\\nimcache\\captain.c"],
-["C:\\SpaceRLTextEngine\\src\\nimcache\\communications.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\communications.o C:\\SpaceRLTextEngine\\src\\nimcache\\communications.c"]
+["C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.c"],
+["C:\\SpaceRLTextEngine\\src\\nimcache\\crew.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.c"]
 ],
 "link":[
 "C:\\SpaceRLTextEngine\\src\\nimcache\\main.o",
