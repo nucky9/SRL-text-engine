@@ -25,6 +25,7 @@ typedef struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ tyObject_BaseCrewIn
 typedef struct NimStringDesc NimStringDesc;
 typedef struct TGenericSeq TGenericSeq;
 typedef struct tySequence_289bJSnZUYmUtCD0DXkXE0Q tySequence_289bJSnZUYmUtCD0DXkXE0Q;
+typedef struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg tyTuple_hIfxrk3SgJbH9bl3niLBXLg;
 typedef struct TNimType TNimType;
 typedef struct TNimNode TNimNode;
 typedef struct tyTuple_q1AkG9aybyHixUsHszEiIGw tyTuple_q1AkG9aybyHixUsHszEiIGw;
@@ -47,10 +48,16 @@ NI level;
 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ personalityType;
 tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
+typedef NU8 tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w;
+struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg {
+tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w Field0;
+NI Field1;
+};
 typedef NU8 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA;
 struct tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
 NI captainAbility;
+tyTuple_hIfxrk3SgJbH9bl3niLBXLg secondaryAbility;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };

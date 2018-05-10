@@ -8,7 +8,6 @@
 #define NIM_INTBITS 64
 
 #include "nimbase.h"
-#include <string.h>
 #undef LANGUAGE_C
 #undef MIPSEB
 #undef MIPSEL
@@ -21,7 +20,7 @@
 #undef near
 #undef powerpc
 #undef unix
-typedef struct tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA;
+typedef struct tyObject_GameSettingscolonObjectType__BUU28bFoXVHi5UM6kVXYug tyObject_GameSettingscolonObjectType__BUU28bFoXVHi5UM6kVXYug;
 typedef struct TNimType TNimType;
 typedef struct TNimNode TNimNode;
 typedef struct tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g;
@@ -40,8 +39,10 @@ typedef struct tyTuple_ujsjpB2O9cjj3uDHsXbnSzg tyTuple_ujsjpB2O9cjj3uDHsXbnSzg;
 typedef struct tyObject_GcStat_0RwLoVBHZPfUAcLczmfQAg tyObject_GcStat_0RwLoVBHZPfUAcLczmfQAg;
 typedef struct tyObject_CellSet_jG87P0AI9aZtss9ccTYBIISQ tyObject_CellSet_jG87P0AI9aZtss9ccTYBIISQ;
 typedef struct tyObject_PageDesc_fublkgIY4LG3mT51LU2WHg tyObject_PageDesc_fublkgIY4LG3mT51LU2WHg;
-typedef struct NimStringDesc NimStringDesc;
-typedef struct TGenericSeq TGenericSeq;
+typedef struct tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA;
+typedef struct tySequence_8Np6tlClE5az1CyqZdN19bQ tySequence_8Np6tlClE5az1CyqZdN19bQ;
+typedef struct tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w;
+typedef struct tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ;
 typedef struct tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog;
 typedef struct tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ;
 typedef struct tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA;
@@ -49,10 +50,12 @@ typedef struct tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w 
 typedef struct tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q;
 typedef struct tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw;
 typedef struct tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg;
-typedef struct tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w;
-typedef struct tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ;
+typedef struct tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ;
+typedef struct TGenericSeq TGenericSeq;
 typedef struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ;
+typedef struct NimStringDesc NimStringDesc;
 typedef struct tySequence_289bJSnZUYmUtCD0DXkXE0Q tySequence_289bJSnZUYmUtCD0DXkXE0Q;
+typedef struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg tyTuple_hIfxrk3SgJbH9bl3niLBXLg;
 typedef struct tyTuple_q1AkG9aybyHixUsHszEiIGw tyTuple_q1AkG9aybyHixUsHszEiIGw;
 typedef NU8 tyEnum_TNimKind_jIBKr1ejBgsfM33Kxw4j7A;
 typedef NU8 tySet_tyEnum_TNimTypeFlag_v8QUszD1sWlSIWZz7mC4bQ;
@@ -167,23 +170,9 @@ tyObject_CellSet_jG87P0AI9aZtss9ccTYBIISQ marked;
 tyObject_CellSeq_Axo1XVm9aaQueTOldv8le5w additionalRoots;
 NI gcThreadId;
 };
-struct TGenericSeq {
-NI len;
-NI reserved;
-};
-struct NimStringDesc {
-  TGenericSeq Sup;
-NIM_CHAR data[SEQ_DECL_SIZE];
-};
-typedef NimStringDesc* tyArray_nHXaesL0DJZHyVS07ARPRA[1];
-struct tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA {
-tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog* captain;
-tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ* communications;
-tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA* engineer;
-tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w* medical;
-tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q* navigation;
-tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw* science;
-tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg* tactical;
+struct tyObject_GameSettingscolonObjectType__BUU28bFoXVHi5UM6kVXYug {
+tySequence_8Np6tlClE5az1CyqZdN19bQ* personalityModifiers;
+tySequence_8Np6tlClE5az1CyqZdN19bQ* abilityModifiers;
 };
 struct tyObject_BaseChunk_Sdq7WpT6qAH858F5ZEdG3w {
 NI prevSize;
@@ -220,7 +209,32 @@ tyObject_PageDesc_fublkgIY4LG3mT51LU2WHg* next;
 NI key;
 tyArray_9a8QARi5WsUggNU9bom7kzTQ bits;
 };
+struct tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA {
+tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog* captain;
+tyObject_CommunicationsOfficercolonObjectType__wnFlv9aO9aNGi3o5MybXAQyQ* communications;
+tyObject_EngineeringOfficercolonObjectType__8liM6t47WLrUSyikv8cHkA* engineer;
+tyObject_MedicalOfficercolonObjectType__C9c0kCMAVqkylAo9bZzRDI5w* medical;
+tyObject_NavigationOfficercolonObjectType__2TU9cTQpfMOQw06LCgDZx3Q* navigation;
+tyObject_ScienceOfficercolonObjectType__fSGVZJXYXAS4sa5877WqRw* science;
+tyObject_TacticalOfficercolonObjectType__cMpUz7QL6IsA9ckWvxIV9a9cg* tactical;
+};
+struct tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ {
+NI Field0;
+NI Field1;
+};
+struct TGenericSeq {
+NI len;
+NI reserved;
+};
+struct tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ {
+tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ* next;
+NI zeroField;
+};
 typedef NU8 tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ;
+struct NimStringDesc {
+  TGenericSeq Sup;
+NIM_CHAR data[SEQ_DECL_SIZE];
+};
 typedef NU8 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ;
 struct tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ {
 tyEnum_Gender_S8HocBi1Mqay43IDDDDmOQ gender;
@@ -231,10 +245,16 @@ NI level;
 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ personalityType;
 tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
+typedef NU8 tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w;
+struct tyTuple_hIfxrk3SgJbH9bl3niLBXLg {
+tyEnum_SecondaryAbility_dwHVYTQaEvrenavHYJmo6w Field0;
+NI Field1;
+};
 typedef NU8 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA;
 struct tyObject_CaptaincolonObjectType__ayQkAUqJ29c1309alQMzvTog {
 tyObject_BaseCrewInfo_XKHobPLd3O3l3A9aqud8UbQ baseInfo;
 NI captainAbility;
+tyTuple_hIfxrk3SgJbH9bl3niLBXLg secondaryAbility;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 tySequence_289bJSnZUYmUtCD0DXkXE0Q* personalityModifiers;
 };
@@ -278,23 +298,24 @@ NI shieldModulation;
 NI security;
 tyEnum_SpecialAbility_hx7wZOTzQdLuVhirIVcmYA specialAbility;
 };
-struct tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ {
-tyObject_FreeCell_u6M5LHprqzkn9axr04yg9bGQ* next;
-NI zeroField;
-};
 struct tyTuple_q1AkG9aybyHixUsHszEiIGw {
 tyEnum_PersonalityType_gdWQV5cGkpq7KxGxo9aIyQQ Field0;
 NI Field1;
+};
+struct tySequence_8Np6tlClE5az1CyqZdN19bQ {
+  TGenericSeq Sup;
+  tyTuple_1v9bKyksXWMsm0vNwmZ4EuQ data[SEQ_DECL_SIZE];
 };
 struct tySequence_289bJSnZUYmUtCD0DXkXE0Q {
   TGenericSeq Sup;
   tyTuple_q1AkG9aybyHixUsHszEiIGw data[SEQ_DECL_SIZE];
 };
 N_LIB_PRIVATE N_NIMCALL(void, randomize_RtUZt2O8eA6Y5pFWOsdgjg)(void);
+N_LIB_PRIVATE N_NIMCALL(void, initSettings_f9ajm7lbLRBEMeNaZ9c8AdfQ)(void);
 N_NIMCALL(void, nimGCvisit)(void* d, NI op);
 static N_NIMCALL(void, TM_V45tF8B8NBcxFcjfe7lhBw_2)(void);
 N_NIMCALL(void, nimRegisterGlobalMarker)(tyProc_T4eqaYlFJYZUv9aG9b1TV0bQ markerProc);
-N_LIB_PRIVATE N_NIMCALL(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA*, generateCrew_VMtMhfVktk0mjWNY9cwADPg)(void);
+N_LIB_PRIVATE N_NIMCALL(tyObject_GameSettingscolonObjectType__BUU28bFoXVHi5UM6kVXYug*, getSettings_01cqgTepOwZPpeTd0L7zBA)(void);
 static N_INLINE(void, asgnRefNoCycle)(void** dest, void* src);
 static N_INLINE(tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g*, usrToCell_yB9aH5WIlwd0xkYrcdPeXrQsystem)(void* usr);
 static N_INLINE(void, nimFrame)(TFrame* s);
@@ -302,8 +323,8 @@ N_LIB_PRIVATE N_NOINLINE(void, stackOverflow_II46IjNZztN9bmbxUD8dt8g)(void);
 static N_INLINE(void, popFrame)(void);
 static N_INLINE(void, rtlAddZCT_MV4BBk6J1qu70IbBxwEn4w_2system)(tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g* c);
 N_LIB_PRIVATE N_NOINLINE(void, addZCT_fCDI7oO1NNVXXURtxSzsRw)(tyObject_CellSeq_Axo1XVm9aaQueTOldv8le5w* s, tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g* c);
-N_NIMCALL(NimStringDesc*, reprAny)(void* p, TNimType* typ);
-N_NIMCALL(void, echoBinSafe)(NimStringDesc** args, NI argsLen_0);
+static N_NIMCALL(void, TM_V45tF8B8NBcxFcjfe7lhBw_3)(void);
+N_LIB_PRIVATE N_NIMCALL(tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA*, generateCrew_VMtMhfVktk0mjWNY9cwADPg)(void);
 static N_INLINE(void, initStackBottomWith)(void* locals);
 N_NOINLINE(void, setStackBottom)(void* theStackBottom);
 NIM_EXTERNC N_NOINLINE(void, systemInit000)(void);
@@ -352,21 +373,32 @@ NIM_EXTERNC N_NOINLINE(void, unknown_tacticalInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, unknown_tacticalDatInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, unknown_crewInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, unknown_crewDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_hashesInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_hashesDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_tablesInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_tablesDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_unicodeInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_unicodeDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_macrosInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_macrosDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_typetraitsInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_typetraitsDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_optionsInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_optionsDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_jsonInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, stdlib_jsonDatInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, unknown_settingsInit000)(void);
+NIM_EXTERNC N_NOINLINE(void, unknown_settingsDatInit000)(void);
 NIM_EXTERNC N_NOINLINE(void, NimMainModule)(void);
 NIM_EXTERNC N_NOINLINE(void, mainDatInit000)(void);
-tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA* newCrew_Fr7coNTFoBWN2YkRLm1Fag;
-extern TNimType NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_;
+tyObject_GameSettingscolonObjectType__BUU28bFoXVHi5UM6kVXYug* gameSettings_a9cqmbi3PNlx9cuddrN777cQ;
+extern TNimType NTI_xHqxgsw1DP8hsrmYmBQMPQ_;
 extern TFrame* framePtr_HRfVMH3jYeBJz6Q6X9b6Ptw;
 extern tyObject_GcHeap_1TRH1TZMaVZTnLNcIHuNFQ gch_IcYaEuuWivYAS86vFMTS3Q;
-extern TNimType NTI_ZIWF3RAPbylxlKADfMpcCw_;
-extern TNimType NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_;
-extern TNimType NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_;
-extern TNimType NTI_DgpHA2MoyK2hOMb2s4fWSw_;
-extern TNimType NTI_9bn9cFcdfV2ORVXywWKHaRCg_;
-extern TNimType NTI_PzqjnrSNOeItfuyXAztypw_;
-extern TNimType NTI_l6gzlXC9az4Slw0mFMjpOXQ_;
+tyObject_ShipCrewcolonObjectType__ROIq9bhCLaVdyWYbjv0VWAA* newCrew_Fr7coNTFoBWN2YkRLm1Fag;
+extern TNimType NTI_Sp6bXpfmbsi9bgPZoqsvJIQ_;
 static N_NIMCALL(void, TM_V45tF8B8NBcxFcjfe7lhBw_2)(void) {
-	nimGCvisit((void*)newCrew_Fr7coNTFoBWN2YkRLm1Fag, 0);
+	nimGCvisit((void*)gameSettings_a9cqmbi3PNlx9cuddrN777cQ, 0);
 }
 
 static N_INLINE(void, nimFrame)(TFrame* s) {
@@ -449,6 +481,9 @@ static N_INLINE(void, asgnRefNoCycle)(void** dest, void* src) {
 	(*dest) = src;
 	popFrame();
 }
+static N_NIMCALL(void, TM_V45tF8B8NBcxFcjfe7lhBw_3)(void) {
+	nimGCvisit((void*)newCrew_Fr7coNTFoBWN2YkRLm1Fag, 0);
+}
 
 static N_INLINE(void, initStackBottomWith)(void* locals) {
 	setStackBottom(locals);
@@ -477,6 +512,14 @@ void PreMainInner(void) {
 	unknown_scienceDatInit000();
 	unknown_tacticalDatInit000();
 	unknown_crewDatInit000();
+	stdlib_hashesDatInit000();
+	stdlib_tablesDatInit000();
+	stdlib_unicodeDatInit000();
+	stdlib_macrosDatInit000();
+	stdlib_typetraitsDatInit000();
+	stdlib_optionsDatInit000();
+	stdlib_jsonDatInit000();
+	unknown_settingsDatInit000();
 	mainDatInit000();
 	stdlib_parseutilsInit000();
 	stdlib_mathInit000();
@@ -500,6 +543,14 @@ void PreMainInner(void) {
 	unknown_scienceInit000();
 	unknown_tacticalInit000();
 	unknown_crewInit000();
+	stdlib_hashesInit000();
+	stdlib_tablesInit000();
+	stdlib_unicodeInit000();
+	stdlib_macrosInit000();
+	stdlib_typetraitsInit000();
+	stdlib_optionsInit000();
+	stdlib_jsonInit000();
+	unknown_settingsInit000();
 }
 
 void PreMain(void) {
@@ -534,47 +585,17 @@ int main(int argc, char** args, char** env) {
 }
 
 NIM_EXTERNC N_NOINLINE(void, NimMainModule)(void) {
-	tyArray_nHXaesL0DJZHyVS07ARPRA T1_;
-	tyArray_nHXaesL0DJZHyVS07ARPRA T2_;
-	tyArray_nHXaesL0DJZHyVS07ARPRA T3_;
-	tyArray_nHXaesL0DJZHyVS07ARPRA T4_;
-	tyArray_nHXaesL0DJZHyVS07ARPRA T5_;
-	tyArray_nHXaesL0DJZHyVS07ARPRA T6_;
-	tyArray_nHXaesL0DJZHyVS07ARPRA T7_;
 	nimfr_("main", "main.nim");
 nimRegisterGlobalMarker(TM_V45tF8B8NBcxFcjfe7lhBw_2);
-	nimln_(5, "main.nim");
-	randomize_RtUZt2O8eA6Y5pFWOsdgjg();
+nimRegisterGlobalMarker(TM_V45tF8B8NBcxFcjfe7lhBw_3);
 	nimln_(6, "main.nim");
-	asgnRefNoCycle((void**) (&newCrew_Fr7coNTFoBWN2YkRLm1Fag), generateCrew_VMtMhfVktk0mjWNY9cwADPg());
+	randomize_RtUZt2O8eA6Y5pFWOsdgjg();
 	nimln_(7, "main.nim");
-	memset((void*)T1_, 0, sizeof(T1_));
-	T1_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).captain, (&NTI_ZIWF3RAPbylxlKADfMpcCw_));
-	echoBinSafe(T1_, 1);
+	initSettings_f9ajm7lbLRBEMeNaZ9c8AdfQ();
 	nimln_(8, "main.nim");
-	memset((void*)T2_, 0, sizeof(T2_));
-	T2_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).communications, (&NTI_9b9bLL9aVzoJ5c0S8E9ajEDJXA_));
-	echoBinSafe(T2_, 1);
+	asgnRefNoCycle((void**) (&gameSettings_a9cqmbi3PNlx9cuddrN777cQ), getSettings_01cqgTepOwZPpeTd0L7zBA());
 	nimln_(9, "main.nim");
-	memset((void*)T3_, 0, sizeof(T3_));
-	T3_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).engineer, (&NTI_WVwu5lbbEGFe9bMbO9bJvyKQ_));
-	echoBinSafe(T3_, 1);
-	nimln_(10, "main.nim");
-	memset((void*)T4_, 0, sizeof(T4_));
-	T4_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).medical, (&NTI_DgpHA2MoyK2hOMb2s4fWSw_));
-	echoBinSafe(T4_, 1);
-	nimln_(11, "main.nim");
-	memset((void*)T5_, 0, sizeof(T5_));
-	T5_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).navigation, (&NTI_9bn9cFcdfV2ORVXywWKHaRCg_));
-	echoBinSafe(T5_, 1);
-	nimln_(12, "main.nim");
-	memset((void*)T6_, 0, sizeof(T6_));
-	T6_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).science, (&NTI_PzqjnrSNOeItfuyXAztypw_));
-	echoBinSafe(T6_, 1);
-	nimln_(13, "main.nim");
-	memset((void*)T7_, 0, sizeof(T7_));
-	T7_[0] = reprAny((*newCrew_Fr7coNTFoBWN2YkRLm1Fag).tactical, (&NTI_l6gzlXC9az4Slw0mFMjpOXQ_));
-	echoBinSafe(T7_, 1);
+	asgnRefNoCycle((void**) (&newCrew_Fr7coNTFoBWN2YkRLm1Fag), generateCrew_VMtMhfVktk0mjWNY9cwADPg());
 	popFrame();
 }
 

@@ -1,6 +1,5 @@
 {"compile":[
-["C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.c"],
-["C:\\SpaceRLTextEngine\\src\\nimcache\\crew.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.c"]
+["C:\\SpaceRLTextEngine\\src\\nimcache\\settings.c", "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\\nim-0.18.0\\lib -o C:\\SpaceRLTextEngine\\src\\nimcache\\settings.o C:\\SpaceRLTextEngine\\src\\nimcache\\settings.c"]
 ],
 "link":[
 "C:\\SpaceRLTextEngine\\src\\nimcache\\main.o",
@@ -26,7 +25,15 @@
 "C:\\SpaceRLTextEngine\\src\\nimcache\\tactical.o",
 "C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_ospaths.o",
 "C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_lexbase.o",
-"C:\\SpaceRLTextEngine\\src\\nimcache\\crewtypes.o"
+"C:\\SpaceRLTextEngine\\src\\nimcache\\crewtypes.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\settings.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_json.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_hashes.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_tables.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_unicode.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_macros.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_options.o",
+"C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_typetraits.o"
 ],
-"linkcmd": "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\"   -o C:\\SpaceRLTextEngine\\src\\../bin/main  C:\\SpaceRLTextEngine\\src\\nimcache\\main.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_random.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_times.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_strutils.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_parseutils.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_math.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_algorithm.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_winlean.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_dynlib.o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_os.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_parsecsv.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_streams.o C:\\SpaceRLTextEngine\\src\\nimcache\\captain.o C:\\SpaceRLTextEngine\\src\\nimcache\\communications.o C:\\SpaceRLTextEngine\\src\\nimcache\\engineer.o C:\\SpaceRLTextEngine\\src\\nimcache\\medical.o C:\\SpaceRLTextEngine\\src\\nimcache\\navigation.o C:\\SpaceRLTextEngine\\src\\nimcache\\science.o C:\\SpaceRLTextEngine\\src\\nimcache\\tactical.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_ospaths.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_lexbase.o C:\\SpaceRLTextEngine\\src\\nimcache\\crewtypes.o    "
+"linkcmd": "\"C:\\Program Files\\mingw64-6.3.0\\mingw64\\bin\\gcc.exe\"   -o C:\\SpaceRLTextEngine\\src\\../bin/main  C:\\SpaceRLTextEngine\\src\\nimcache\\main.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_system.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_random.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_times.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_strutils.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_parseutils.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_math.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_algorithm.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_winlean.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_dynlib.o C:\\SpaceRLTextEngine\\src\\nimcache\\crew.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_os.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_parsecsv.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_streams.o C:\\SpaceRLTextEngine\\src\\nimcache\\captain.o C:\\SpaceRLTextEngine\\src\\nimcache\\communications.o C:\\SpaceRLTextEngine\\src\\nimcache\\engineer.o C:\\SpaceRLTextEngine\\src\\nimcache\\medical.o C:\\SpaceRLTextEngine\\src\\nimcache\\navigation.o C:\\SpaceRLTextEngine\\src\\nimcache\\science.o C:\\SpaceRLTextEngine\\src\\nimcache\\tactical.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_ospaths.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_lexbase.o C:\\SpaceRLTextEngine\\src\\nimcache\\crewtypes.o C:\\SpaceRLTextEngine\\src\\nimcache\\settings.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_json.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_hashes.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_tables.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_unicode.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_macros.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_options.o C:\\SpaceRLTextEngine\\src\\nimcache\\stdlib_typetraits.o    "
 }

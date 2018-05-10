@@ -254,6 +254,8 @@ static N_INLINE(void, asgnRef)(void** dest, void* src);
 static N_INLINE(void, incRef_9cAA5YuQAAC3MVbnGeV86swsystem)(tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g* c);
 static N_INLINE(void, decRef_MV4BBk6J1qu70IbBxwEn4wsystem)(tyObject_Cell_1zcF9cV8XIAtbN8h5HRUB8g* c);
 N_NIMCALL(void, raiseException)(Exception* e, NCSTRING ename);
+N_NIMCALL(NI, nimParseBiggestFloat)(NimStringDesc* s, NF* number, NI start);
+N_NIMCALL(NI, nimParseBiggestFloat)(NimStringDesc* s, NF* number, NI start);
 extern TFrame* framePtr_HRfVMH3jYeBJz6Q6X9b6Ptw;
 extern TNimType NTI_6woiEp3hwhYMr1p5tjkZvA_;
 extern TNimType NTI_I3Jtn27626sFBOls6BBQ2Q_;
@@ -578,6 +580,27 @@ N_LIB_PRIVATE N_NIMCALL(NI, npuParseInt)(NimStringDesc* s, NI* number, NI start)
 	goto LA1_;
 	LA11_: ;
 	LA1_: ;
+	popFrame();
+	return result;
+}
+
+N_LIB_PRIVATE N_NIMCALL(NI, npuParseFloat)(NimStringDesc* s, NF* number, NI start) {
+	NI result;
+	NF bf;
+	nimfr_("parseFloat", "parseutils.nim");
+	result = (NI)0;
+	bf = (NF)0;
+	nimln_(354, "parseutils.nim");
+	result = nimParseBiggestFloat(s, (&bf), start);
+	nimln_(355, "parseutils.nim");
+	{
+		nimln_(398, "system.nim");
+		nimln_(355, "parseutils.nim");
+		if (!!((result == ((NI) 0)))) goto LA3_;
+		nimln_(356, "parseutils.nim");
+		(*number) = bf;
+	}
+	LA3_: ;
 	popFrame();
 	return result;
 }

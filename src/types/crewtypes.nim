@@ -40,6 +40,7 @@ type
   Captain* = ref object
     baseInfo*: BaseCrewInfo
     captainAbility*: int
+    secondaryAbility*: tuple[ability: SecondaryAbility, level: int]
     specialAbility*: SpecialAbility
     personalityModifiers*: seq[PersonalityModifier] 
 
@@ -94,3 +95,4 @@ type
 
 const
   personalityModifiers* = [(3, -3), (13, -2), (33, -1), (67, 0), (87, 1), (97, 2), (100, 3)]
+  abilityLevels* =[(15, 6), (30, 7), (70, 8), (85, 9), (100, 10)]
