@@ -3,7 +3,7 @@
 /* The generated code is subject to the original license. */
 /* Compiled for: Windows, amd64, gcc */
 /* Command for C compiler:
-   "C:\Program Files\mingw64-6.3.0\mingw64\bin\gcc.exe" -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\nim-0.18.0\lib -o C:\SpaceRLTextEngine\src\nimcache\stdlib_system.o C:\SpaceRLTextEngine\src\nimcache\stdlib_system.c */
+   C:\mingw64\bin\gcc.exe -c  -w -mno-ms-bitfields -DWIN32_LEAN_AND_MEAN  -IC:\nim-0.18.0\lib -o c:\SRL-text-engine\src\nimcache\stdlib_system.o c:\SRL-text-engine\src\nimcache\stdlib_system.c */
 #define NIM_NEW_MANGLING_RULES
 #define NIM_INTBITS 64
 
